@@ -20,3 +20,8 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 - Key-Screens erstellt
 - User Stories erstellt
 - Problem Statement erstellt
+
+## Arbeit für die nächsten 6 Lektionen
+- basic React-App aufbauen
+- Seitenaufbau 
+- Einfache Datenbank aufbauen
