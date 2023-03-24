@@ -8,6 +8,12 @@
 
 
 ## User Story
+Die Dateien "User1.jpg" ,"User2.jpg" und "User3.jpg" stellen die drei Userstories dar, die ich entwickelt habe.
+
+## Key Frame
+Die Datei "Keyframe_figma.jpg" stellt meine originalle Idee dar, die ich entwickelt habe. 
+## Planungsübersicht
+Die Planungsübersicht findet in der Datei "Planung.md" statt.
 
 
 
