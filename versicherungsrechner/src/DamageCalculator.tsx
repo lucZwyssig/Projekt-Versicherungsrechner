@@ -9,6 +9,12 @@ function Calculator () {
                 <li>
                     <Link to="/">Home</Link>
                 </li>
+                <li>
+                    <Link to="/memory">Memory</Link>
+                </li>
+                <li>
+                    <Link to="/comparer">Rechner</Link>
+                </li>                
             </ul>
         </div>
     )

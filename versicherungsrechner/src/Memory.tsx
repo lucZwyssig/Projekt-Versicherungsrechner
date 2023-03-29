@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import { Link } from 'react-router-dom';
-
-function Home () {
+import './index.css';
+function Memory () {
     return(
         <div>
             <ul>
                 <li>
-                    <Link to="/memory">Memory</Link>
+                    <Link to="/">Home</Link>
                 </li>
                 <li>
                     <Link to="/calculator">Rechner</Link>
@@ -18,12 +17,6 @@ function Home () {
                 </li>                
             </ul>
         </div>
-    );
-    
-
-    
-
-
+    )
 }
-
-export default Home;
+export default Memory;
