@@ -25,3 +25,4 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 - basic React-App aufbauen
 - Seitenaufbau 
 - Einfache Datenbank aufbauen
+- Verbindung Datenbank und React-App realisieren
