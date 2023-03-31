@@ -8,18 +8,21 @@ import { useState } from 'react';
 
 
 function Instruction({shorttext, longtext}: {shorttext: string, longtext: string}){
-    const [expander, expandit] = useState("");
+    
+    const [show, showchange] = useState(false);
+    
+    
+    
 
 
-    function Expender(){
-        
-        expandit(longtext);
-    }
+    
 
     return(
         <div>
-            <p>{shorttext}{expander}</p>
-            <button onClick={(e)=> Expender()}>show more</button>
+            <p>
+                {show ? [shorttext, longtext] : shorttext}
+            </p>
+            <button onClick={(e)=> showchange(!show)}>{show ? "show less" : "show more"}</button>
             
         </div>
     )

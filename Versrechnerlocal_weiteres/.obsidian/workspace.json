@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e3dc84377a8c10f3",
@@ -158,9 +157,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2759c7c6b005f24a",
+  "active": "4c2f98777f70c706",
   "lastOpenFiles": [
     "Planung.md",
+    "Keyframe_figma.jpg",
     "Idee.md",
     "2023-03-24.md"
   ]

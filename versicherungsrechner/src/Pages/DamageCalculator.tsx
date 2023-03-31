@@ -8,8 +8,13 @@ function Calculator () {
     return(
         <div>
            <Header/>
-           <Instruction shorttext='morrolester' longtext='morrolessssssster'/>
-           
+           <Instruction shorttext='shorttest' longtext='longtest'/>
+           <form>
+            <input type="text" placeholder="Versicherungssumme eingeben"/>
+            <input type="text" placeholder="Schaden eingeben"/>
+            <input type="text" placeholder="Hauswert eingeben"/>
+
+            </form>   
         </div>
     )
 }
