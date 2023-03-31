@@ -1,11 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from './Home';
-import Calculator from './DamageCalculator';
-import Memory from './Memory';
-import Comparer from './Comparer';
+import Home from './Pages/Home';
+import Calculator from './Pages/DamageCalculator';
+import Memory from './Pages/Memory';
+import Comparer from './Pages/Comparer';
 
 function App() {
   return (

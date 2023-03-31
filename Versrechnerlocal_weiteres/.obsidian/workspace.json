@@ -80,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e3dc84377a8c10f3",
@@ -157,7 +158,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4c2f98777f70c706",
+  "active": "2759c7c6b005f24a",
   "lastOpenFiles": [
     "Planung.md",
     "Idee.md",
