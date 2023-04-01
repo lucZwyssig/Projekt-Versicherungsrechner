@@ -2,19 +2,18 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 
 ## TODO
 ### Priority 1
-- basic React-App aufbauen
-- Seitenaufbau 
-- Aufbau des Schadensrechners realisieren
+
 ### Priority 2
 - Datenbank mit React-App verbinden
 - Aufbau des Vergleichers realisieren
-- CSS realisieren
-- - Einfache Datenbank aufbauen
+- Einfache Datenbank aufbauen
 ###  Priority 3
 - Memory Teil realisieren
 - Anleitungen, evt. Erklärvideos erstellen
 ## DOING
-- Zeitplan erstellen
+- Aufbau des Schadensrechners realisieren
+- CSS realisieren
+
 ## DONE
 - Git Repo erstellt 
 - Key-Screens erstellt

@@ -23,9 +23,11 @@
             "id": "4c2f98777f70c706",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Keyframe_figma.jpg"
+                "file": "Planung.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -96,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Keyframe_figma.jpg",
+                "file": "Planung.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Keyframe_figma.jpg",
+                "file": "Planung.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Keyframe_figma.jpg"
+                "file": "Planung.md"
               }
             }
           }
@@ -159,8 +161,8 @@
   },
   "active": "4c2f98777f70c706",
   "lastOpenFiles": [
-    "Planung.md",
     "Keyframe_figma.jpg",
+    "Planung.md",
     "Idee.md",
     "2023-03-24.md"
   ]
