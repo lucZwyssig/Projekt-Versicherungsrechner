@@ -1,0 +1,44 @@
+
+body{
+    background-color: aliceblue;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+ 
+}
+li{
+    margin-left: 20px;
+}
+input{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+
+.col{
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: rgba(217, 217, 217, 0);
+    margin: 5px;
+    margin-right: 5px;
+    background-color: rgb(217,217,217);
+    
+}  
+a:active {
+    color: rgb(118, 116, 101);
+
+  }
+
+a{
+    color: black;
+    text-decoration: none;
+    font-family: fantasy;
+}
+#result{
+    background-color: rgb(180, 132, 132);
+}
+
