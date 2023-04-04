@@ -3,18 +3,33 @@ body{
     background-color: aliceblue;
 }
 
-ul{
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
- 
-}
-li{
-    margin-left: 20px;
+.navbar{
+    background-color: rgb(158, 201, 238);
+    height: 50px ;
+    
 }
 input{
     margin-bottom: 5px;
     margin-top: 5px;
+    width: 80%;
+    text-align: center;
+    -moz-appearance: textfield;
+
+
+}
+.nav-link{
+    padding: 5px;
+    padding-left: 30px;
+    border: 3px ;
+    border-style: solid;
+    margin-left: 5px;
+    border-radius: 3px;
+}
+
+input:focus{
+    border-color: rgb(0, 0, 0);
+   
+
 }
 
 
@@ -27,7 +42,8 @@ input{
     margin-right: 5px;
     background-color: rgb(217,217,217);
     
-}  
+} 
+
 a:active {
     color: rgb(118, 116, 101);
 
