@@ -8,6 +8,7 @@ import Instruction from '../Comps/Instructions';
 import "../CSS.css"
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
+import Popup from '../Comps/Popup';
  // change variable names to english
  //do the screen size thing for bootstrap
 
@@ -83,6 +84,7 @@ function Calculator () {
          {damage}
          </Col>
          </Row>
+         <Popup/>
          
         
          </Container>
