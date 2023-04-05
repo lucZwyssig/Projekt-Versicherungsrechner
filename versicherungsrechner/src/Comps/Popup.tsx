@@ -11,7 +11,7 @@ function App() {
 
   async function fetchSaves() {
     try {
-      const response = await axios.get<Save[]>('/api/saves');
+      const response = await axios.get<Save[]>('http://localhost:3001/api/saves');
       setSaves(response.data);
     } catch (error) {
       console.error(error);

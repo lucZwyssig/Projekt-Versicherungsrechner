@@ -1,11 +1,13 @@
-const express = require('express');
+const express = require('express'); //code von Modul 162
+const cors = require('cors');
 const mongoose = require('mongoose');
 
 const app = express();
 
-const MONGO_URI = 'mongodb://localhost:27017/Saves';
+app.use(cors());
+app.use(express.json());
 
-mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://user:user@localhost:27017/Saves')
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error(err));
 
@@ -15,16 +17,9 @@ const saveSchema = new mongoose.Schema({
 
 const Save = mongoose.model('Save', saveSchema);
 
-app.get('/saves', async (req, res) => {
-  try {
-    const saves = await Save.find();
-    res.json(saves);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Server Error');
-  }
+app.get('/api/saves', async (req, res) => {
+  const saves = await Save.find();
+  res.json(saves);
 });
 
-app.listen(3001, () => {
-  console.log('Server listening on port 3001');
-});
+app.listen(3001, () => console.log('Server started at http://localhost:3001'));
