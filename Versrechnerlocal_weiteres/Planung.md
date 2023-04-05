@@ -4,9 +4,7 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 ### Priority 1
 
 ### Priority 2
-
-- Aufbau des Vergleichers realisieren
-
+- Speicherfunktion hinzufügen
 - Speicheroption realisieren
 ###  Priority 3
 - Memory Teil realisieren
@@ -14,7 +12,8 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 - css fertig realisieren
 
 ## DOING
-- Datenbank mit React-App verbinden
+
+- Aufbau des Vergleichers realisieren
 
 ## DONE
 - Git Repo erstellt 
@@ -26,6 +25,7 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 - CSS realisieren (einfach)
 - Aufbau des Schadensrechners realisieren
 - Einfache Datenbank aufbauen
+- Datenbank mit React-App verbinde
 
 ## Arbeit für die nächsten 6 Lektionen
 
