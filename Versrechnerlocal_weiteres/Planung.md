@@ -4,15 +4,17 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 ### Priority 1
 
 ### Priority 2
-- Datenbank mit React-App verbinden
+
 - Aufbau des Vergleichers realisieren
-- Einfache Datenbank aufbauen
+
+- Speicheroption realisieren
 ###  Priority 3
 - Memory Teil realisieren
 - Anleitungen, evt. Erklärvideos erstellen
+- css fertig realisieren
+
 ## DOING
-- Aufbau des Schadensrechners realisieren
-- CSS realisieren
+- Datenbank mit React-App verbinden
 
 ## DONE
 - Git Repo erstellt 
@@ -21,6 +23,9 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 - Problem Statement erstellt
 - basic React-App aufbauen
 - Seitenaufbau 
+- CSS realisieren (einfach)
+- Aufbau des Schadensrechners realisieren
+- Einfache Datenbank aufbauen
 
 ## Arbeit für die nächsten 6 Lektionen
 

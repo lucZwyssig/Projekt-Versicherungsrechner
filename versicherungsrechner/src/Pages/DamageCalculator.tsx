@@ -8,7 +8,8 @@ import Instruction from '../Comps/Instructions';
 import "../CSS.css"
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
-import Popup from '../Comps/Popup';
+import Popuper from '../Comps/Popup';
+
  // change variable names to english
  //do the screen size thing for bootstrap
 
@@ -45,11 +46,13 @@ function Calculator () {
     
     
       return (
+        <div>
+          <Header/>
         
-        <Container fluid className='bootstrap_container'>
+        <Container fluid className='bootstrap_container ml-5 mr-50  '>
             <Row className='row'>
             
-            <Header/>
+            
             
                      
            </Row>
@@ -64,30 +67,36 @@ function Calculator () {
           <Row className='row'>
             
             
-          <Col className='col' id='colform'>
+          <Col className='col'id='colform'>
           <form onSubmit={handleSubmit}>
+            <Col className='mor'>
           
             <input type="text" placeholder="Versicherungssumme eingeben" value={Versumme} onChange={(event) => handleInputChange(event, setVersumme)}/>
-            <br/>
+            </Col>
+            
+            <Col className='mor'>
             
             
             <input type="text" placeholder="Schaden eingeben" value={Schaden} onChange={(event) => handleInputChange(event, setSchaden)}/>
-            <br/>
+            </Col>
+            <Col className='mor'>
             
             <input type="text" placeholder="Hauswert eingeben" value={Hauswert} onChange={(event) => handleInputChange(event, setHausw)}/>
-            <br/>
+            </Col>
             
             <input type="submit" value="submit" />
          </form>
          </Col>
+         
          <Col className='col' id='result'>
          {damage}
          </Col>
          </Row>
-         <Popup/>
+         <Popuper/>
          
         
          </Container>
+         </div>
       );
 }
 export default Calculator;
