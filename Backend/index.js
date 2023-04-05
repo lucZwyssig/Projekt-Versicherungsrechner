@@ -12,7 +12,7 @@ mongoose.connect('mongodb://user:user@localhost:27017/Saves')
   .catch((err) => console.error(err));
 
 const saveSchema = new mongoose.Schema({
-  test: String
+  test: Number
 });
 
 const Save = mongoose.model('Save', saveSchema);

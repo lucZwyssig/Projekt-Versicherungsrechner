@@ -8,7 +8,7 @@ import Instruction from '../Comps/Instructions';
 import "../CSS.css"
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
-import Popuper from '../Comps/Popup';
+import Popuper from '../Comps/Popuper';
 
  // change variable names to english
  //do the screen size thing for bootstrap
@@ -86,13 +86,17 @@ function Calculator () {
             
             <input type="submit" value="submit" />
          </form>
+         <Popuper/>
          </Col>
          
          <Col className='col' id='result'>
          {damage}
+         
+         
          </Col>
          </Row>
-         <Popuper/>
+         
+         
          
         
          </Container>
