@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Link } from 'react-router-dom';
+import Input from '../Comps/Input';
 
 function Memory () {
     return(
@@ -16,6 +17,9 @@ function Memory () {
                     <Link to="/comparer">Rechner</Link>
                 </li>                
             </ul>
+
+            
+            
         </div>
     )
 }
