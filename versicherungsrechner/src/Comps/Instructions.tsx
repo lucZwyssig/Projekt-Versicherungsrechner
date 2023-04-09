@@ -10,13 +10,6 @@ import { useState } from 'react';
 function Instruction({shorttext, longtext}: {shorttext: string, longtext: string}){
     
     const [show, showchange] = useState(false);
-    
-    
-    
-
-
-    
-
     return(
         <div>
             <p>

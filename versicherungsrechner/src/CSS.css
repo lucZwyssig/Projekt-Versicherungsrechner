@@ -23,9 +23,19 @@ input{
   padding: 10px; 
   font-size: 16px;
   box-sizing: border-box;
-  width: 300px; 
+  width: min-content; 
 
 }
+.colform{
+    display: flex;
+    justify-content: center;
+    
+}
+#popbutton{
+    margin-top: 50%;
+    width: min-content;
+}
+
 
 
 

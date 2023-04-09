@@ -6,34 +6,22 @@ import { Container } from 'react-bootstrap';
 import Instruction from '../Comps/Instructions';
 import {Row, Col} from 'react-bootstrap'
 import { useState } from 'react';
+import Input from '../Comps/Input';
+import Popuper from '../Comps/Popuper';
 
 function Comparer () {
     const [damage, setdamage] = useState(0);
-    const [Versumme, setVersumme] = useState("");
-    const [Schaden, setSchaden] = useState("");
-    const [Hauswert, setHausw] = useState("");
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
+    const [prämie, setprämie] = useState(0);
+    const calculator = (prop: number) =>{
+      setdamage (prop);
+
+    }
+    const premcalc = (prop: number) =>{
+      setprämie(prop);
+    }
+    
+    
         
-        const versummeNumber = parseFloat(Versumme);
-        const hauswertNumber = parseFloat(Hauswert);
-        const schadenNumber = parseFloat(Schaden);
-      
-        if (hauswertNumber == 0)  {
-          
-          return;
-        }
-        else setdamage(versummeNumber/hauswertNumber*schadenNumber);
-      
-        
-      }
-        function handleInputChange(event: React.ChangeEvent<HTMLInputElement>, setValue: React.Dispatch<React.SetStateAction<string>>) {
-          const value = event.target.value;
-          const isValidInput = /^\d*$/.test(value);
-          if (isValidInput) {
-            setValue(value);
-          }
-        }
     return(
         <div>
             <Header/>
@@ -45,25 +33,17 @@ function Comparer () {
           </Col>
           </Row>
           <Row className='row'>
-            <Col className='col'>
-            <form onSubmit={handleSubmit}>
-            <Col className='mor'>
-          
-            <input type="text" placeholder="Versicherungssumme eingeben" value={Versumme} onChange={(event) => handleInputChange(event, setVersumme)}/>
+            <Col className='colform'>
+              <Input Calc={calculator} Premium={premcalc}/>
+              <Popuper/>
+
             </Col>
-            
-            <Col className='mor'>
-            
-            
-            <input type="text" placeholder="Schaden eingeben" value={Schaden} onChange={(event) => handleInputChange(event, setSchaden)}/>
+            <Col className='result'>
+
             </Col>
-            <Col className='mor'>
-            
-            <input type="text" placeholder="Hauswert eingeben" value={Hauswert} onChange={(event) => handleInputChange(event, setHausw)}/>
-            </Col>
-            
-            <input type="submit" value="submit" />
-         </form>
+            <Col className='colform'>
+            <Input Calc={calculator} Premium={premcalc}/>
+            <Popuper/>  
             </Col>
           </Row>
 

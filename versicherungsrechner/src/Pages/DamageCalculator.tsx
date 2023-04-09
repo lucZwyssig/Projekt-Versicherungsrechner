@@ -16,6 +16,7 @@ function Calculator () {
     
     const [damage, setdamage] = useState(0);
     
+    
     const calculator = (prop: number) =>{
       setdamage (prop);
 

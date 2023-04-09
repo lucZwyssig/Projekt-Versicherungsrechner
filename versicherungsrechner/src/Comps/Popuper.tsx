@@ -49,7 +49,9 @@ function MYPopup() {
     }
   
     return (
-    <input type="button" value="change size of this button" onClick={(e) => toggle()} />
+      <div>
+    <input type="button" id='popbutton'  value="change size of this button" onClick={(e) => toggle()} />
+    </div>
     );
   
   
