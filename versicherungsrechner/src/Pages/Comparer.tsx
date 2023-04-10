@@ -9,14 +9,22 @@ import { useState } from 'react';
 import Popuper from '../Comps/Popuper';
 
 function Comparer () {
-    const [damage, setdamage] = useState(0);
-    const [prämie, setprämie] = useState(0);
-    const calculator = (prop: number) =>{
-      setdamage (prop);
+  const [Versumme1, setVersumme1] = useState("");
+  const [Hauswert1, setHausw1] = useState("");
+  const [Prämie1, setPrämie1] = useState("");
+  const [Versumme2, setVersumme2] = useState("");
+  const [Hauswert2, setHausw2] = useState("");
+  const [Prämie2, setPrämie2] = useState("");
+    function handleSubmit(){
+
 
     }
-    const premcalc = (prop: number) =>{
-      setprämie(prop);
+    function handleInputChange(event: React.ChangeEvent<HTMLInputElement>, setValue: React.Dispatch<React.SetStateAction<string>>){
+      const value = event.target.value;
+    const isValidInput = /^\d*$/.test(value);
+    if (isValidInput) {
+        setValue(value);
+    }
     }
     
     
@@ -33,14 +41,39 @@ function Comparer () {
           </Row>
           <Row className='row'>
             <Col className='colform'>
+            <form onSubmit={handleSubmit}>
+                    <Col className='mor'>
+                        <input type="text" placeholder="Versicherungssumme eingeben" value={Versumme1} onChange={(event) => handleInputChange(event, setVersumme1)}/>
+                    </Col>
+                    <Col className='mor'>
+                        <input type="text" placeholder="Prämie eingeben" value={Prämie1} onChange={(event) => handleInputChange(event, setPrämie1)}/>
+                    </Col>
+                    <Col className='mor'>
+                        <input type="text" placeholder="Hauswert eingeben" value={Hauswert1} onChange={(event) => handleInputChange(event, setHausw1)}/>
+                    </Col>
+                    
+                    <input type="submit" value="submit" />
+                </form>
               
               <Popuper/>
-
             </Col>
             <Col className='result'>
 
             </Col>
             <Col className='colform'>
+            <form onSubmit={handleSubmit}>
+                    <Col className='mor'>
+                        <input type="text" placeholder="Versicherungssumme eingeben" value={Versumme2} onChange={(event) => handleInputChange(event, setVersumme2)}/>
+                    </Col>
+                    <Col className='mor'>
+                        <input type="text" placeholder="Prämie eingeben" value={Prämie2} onChange={(event) => handleInputChange(event, setPrämie2)}/>
+                    </Col>
+                    <Col className='mor'>
+                        <input type="text" placeholder="Hauswert eingeben" value={Hauswert2} onChange={(event) => handleInputChange(event, setHausw2)}/>
+                    </Col>
+                    
+                    <input type="submit" value="submit" />
+                </form>
             
             <Popuper/>  
             </Col>
