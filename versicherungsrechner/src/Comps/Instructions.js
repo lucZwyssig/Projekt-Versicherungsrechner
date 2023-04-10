@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 
 
-function Instruction({shorttext, longtext}: {shorttext: string, longtext: string}){
+function Instruction({shorttext, longtext}){
     
     const [show, showchange] = useState(false);
     return(

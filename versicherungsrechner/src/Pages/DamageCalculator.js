@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container } from 'react-bootstrap';
-import Header from '../Comps/Header';
-import Instruction from '../Comps/Instructions';
+import Header from '../Comps/Header.js';
+import Instruction from '../Comps/Instructions.js';
 import "../CSS.css"
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
-import Popuper from '../Comps/Popuper';
+import Popuper from '../Comps/Popuper.js';
 
 
  // change variable names to english
@@ -21,7 +21,7 @@ function Calculator () {
     const [Prämie, setPrämie] = useState("");
     
     
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (event) => {
       event.preventDefault();
 
       const versummeNumber = parseFloat(Versumme);
@@ -36,7 +36,7 @@ function Calculator () {
           
       }
   }
-  function handleInputChange(event: React.ChangeEvent<HTMLInputElement>, setValue: React.Dispatch<React.SetStateAction<string>>) {
+  function handleInputChange(event, setValue) {
     const value = event.target.value;
     const isValidInput = /^\d*$/.test(value);
     if (isValidInput) {

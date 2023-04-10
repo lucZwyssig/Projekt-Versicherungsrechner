@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Link } from 'react-router-dom';
-import Header from '../Comps/Header';
+import Header from '../Comps/Header.js';
 import { Container } from 'react-bootstrap';
-import Instruction from '../Comps/Instructions';
+import Instruction from '../Comps/Instructions.js';
 import {Row, Col} from 'react-bootstrap'
 import { useState } from 'react';
-import Popuper from '../Comps/Popuper';
+import Popuper from '../Comps/Popuper.js';
+import Chart from 'react-google-charts';
 
 function Comparer () {
   const [Versumme1, setVersumme1] = useState("");
@@ -19,7 +20,7 @@ function Comparer () {
 
 
     }
-    function handleInputChange(event: React.ChangeEvent<HTMLInputElement>, setValue: React.Dispatch<React.SetStateAction<string>>){
+    function handleInputChange(event, setValue){
       const value = event.target.value;
     const isValidInput = /^\d*$/.test(value);
     if (isValidInput) {
@@ -58,6 +59,7 @@ function Comparer () {
               <Popuper/>
             </Col>
             <Col className='result'>
+                
 
             </Col>
             <Col className='colform'>
