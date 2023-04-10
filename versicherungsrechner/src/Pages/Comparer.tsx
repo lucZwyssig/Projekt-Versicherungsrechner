@@ -6,7 +6,6 @@ import { Container } from 'react-bootstrap';
 import Instruction from '../Comps/Instructions';
 import {Row, Col} from 'react-bootstrap'
 import { useState } from 'react';
-import Input from '../Comps/Input';
 import Popuper from '../Comps/Popuper';
 
 function Comparer () {
@@ -34,7 +33,7 @@ function Comparer () {
           </Row>
           <Row className='row'>
             <Col className='colform'>
-              <Input Calc={calculator} Premium={premcalc}/>
+              
               <Popuper/>
 
             </Col>
@@ -42,7 +41,7 @@ function Comparer () {
 
             </Col>
             <Col className='colform'>
-            <Input Calc={calculator} Premium={premcalc}/>
+            
             <Popuper/>  
             </Col>
           </Row>

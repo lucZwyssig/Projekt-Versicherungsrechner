@@ -7,7 +7,7 @@ import "../CSS.css"
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 import Popuper from '../Comps/Popuper';
-import Input from '../Comps/Input';
+
 
  // change variable names to english
  //do the screen size thing for bootstrap
@@ -15,12 +15,34 @@ import Input from '../Comps/Input';
 function Calculator () {
     
     const [damage, setdamage] = useState(0);
+    const [Versumme, setVersumme] = useState("");
+    const [Schaden, setSchaden] = useState("");
+    const [Hauswert, setHausw] = useState("");
+    const [Prämie, setPrämie] = useState("");
     
     
-    const calculator = (prop: number) =>{
-      setdamage (prop);
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
 
+      const versummeNumber = parseFloat(Versumme);
+      const hauswertNumber = parseFloat(Hauswert);
+      const schadenNumber = parseFloat(Schaden);
+      const prämieNumber = parseFloat(Prämie);
+
+      if (hauswertNumber === 0) {
+          return;
+      } else {
+          setdamage(versummeNumber/hauswertNumber*schadenNumber);
+          
+      }
+  }
+  function handleInputChange(event: React.ChangeEvent<HTMLInputElement>, setValue: React.Dispatch<React.SetStateAction<string>>) {
+    const value = event.target.value;
+    const isValidInput = /^\d*$/.test(value);
+    if (isValidInput) {
+        setValue(value);
     }
+}
       return (
       <div>
         <Header/>
@@ -33,7 +55,20 @@ function Calculator () {
           </Row>
           <Row className='row'>
             <Col className='col'id='colform'>
-              <Input Calc={calculator}/>
+            <form onSubmit={handleSubmit}>
+                    <Col className='mor'>
+                        <input type="text" placeholder="Versicherungssumme eingeben" value={Versumme} onChange={(event) => handleInputChange(event, setVersumme)}/>
+                    </Col>
+                    <Col className='mor'>
+                        <input type="text" placeholder="Schaden eingeben" value={Schaden} onChange={(event) => handleInputChange(event, setSchaden)}/>
+                    </Col>
+                    <Col className='mor'>
+                        <input type="text" placeholder="Hauswert eingeben" value={Hauswert} onChange={(event) => handleInputChange(event, setHausw)}/>
+                    </Col>
+                    
+                    <input type="submit" value="submit" />
+                </form>
+              
               <Popuper/>
             </Col>
             <Col className='col' id='result'>
