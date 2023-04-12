@@ -3,20 +3,24 @@ import axios from 'axios';
 import Popup from 'reactjs-popup';
 import '../CSS.css';
 
-function MYPopup() {
+function MYPopup(props) {
   const [saves, setSaves] = useState([]);
   const [pop, setpop] = useState(false);
+  const [selectedSave, setSelectedSave] = useState(null);
+  
   
   function toggle (){
     setpop(!pop);
-    console.log(pop);
+    
   }
+
+
 
   async function fetchSaves() {
     try {
       const response = await axios.get('http://localhost:3001/api/saves');
       setSaves(response.data);
-    } catch (error) {
+      } catch (error) {
       console.error(error);
     }
   }
@@ -25,6 +29,11 @@ function MYPopup() {
     fetchSaves();
   }, []);
 
+  
+    
+    
+    
+
   if (pop) {
     return (
       <div className='popper'>
@@ -32,7 +41,8 @@ function MYPopup() {
           <div className='popperstuff'>
             <ul>
               {saves.map((singlesave) =>(
-                <li key={singlesave._id}>{singlesave.test} </li>
+                <li key={singlesave._id}>{singlesave.premium}{singlesave.versum} <button onClick={(e) => console.log(singlesave)}></button></li>
+                
               ))}
             </ul>
             <input type="button" onClick={(e) => toggle()} />

@@ -16,13 +16,13 @@ input{
 
     margin-bottom: 5px;
     margin-top: 5px;
-    width: 80%;
+    
     text-align: center;
     appearance: textfield;
     border: 3px solid #ccc; 
   padding: 10px; 
   font-size: 16px;
-  box-sizing: border-box;
+  
   width: min-content; 
 
 }
@@ -49,6 +49,7 @@ input{
     bottom: 0;
     position: fixed;
     justify-content: center;
+    z-index: 9999;
 }
 
 .overlay {
@@ -115,5 +116,4 @@ a{
     margin-top: 100px;
     
     
-  }
-
+}
