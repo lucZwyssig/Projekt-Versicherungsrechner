@@ -14,8 +14,6 @@ function MYPopup(props) {
     
   }
 
-
-
   async function fetchSaves() {
     try {
       const response = await axios.get('http://localhost:3001/api/saves');
@@ -28,11 +26,6 @@ function MYPopup(props) {
   useEffect(() => {
     fetchSaves();
   }, []);
-
-  
-    
-    
-    
 
   if (pop) {
     return (

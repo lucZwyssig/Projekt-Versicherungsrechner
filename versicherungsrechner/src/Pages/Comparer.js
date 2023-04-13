@@ -12,10 +12,10 @@ import Chart from 'react-google-charts';
 
 function Comparer () {
   const [Versumme1, setVersumme1] = useState("");
-  const [Hauswert1, setHausw1] = useState("");
+  const [Hauswert, setHausw] = useState("");
   const [Prämie1, setPrämie1] = useState("");
   const [Versumme2, setVersumme2] = useState("");
-  const [Hauswert2, setHausw2] = useState("");
+ 
   const [Prämie2, setPrämie2] = useState("");
   const [damage,setDamage] = useState("");
   
@@ -28,26 +28,38 @@ function Comparer () {
   }
   
    const [data, setData] = useState([
-        ['Jahre', 'Prämie1', 'Prämie2'],
+        ['Jahre', 'P1', 'P2'],
         [1, 0, 0],
         [2, 0, 0],
         [5, 0, 0],
         [10, 0, 0],
         [15, 0, 0]
       ]);
+
+    const options = {
+      
+        width: "100%",
+        backgroundColor: {
+            fill: '#D9D9D9',
+            
+         },
+         
+     
+    };
     const handleSubmit = (event) => {
         event.preventDefault();
         
         
-        if (Hauswert1 && Hauswert2 != 0 ){
+        if (Hauswert != 0 ){
+          //fix data
         setData(
             [
-                    ['Jahre', 'Prämie1', 'Prämie2'],
-                    [1,  1*Prämie1+Versumme1/Hauswert1*damage, 1*Prämie2+Versumme2/Hauswert2*damage],
-                    [2, 2*Prämie1+Versumme1/Hauswert1*damage, 2*Prämie2+Versumme2/Hauswert2*damage],
-                    [5, 5*Prämie1+Versumme1/Hauswert1*damage, 5*Prämie2+Versumme2/Hauswert2*damage],
-                    [10, 10*Prämie1+Versumme1/Hauswert1*damage, 10*Prämie2+Versumme2/Hauswert2*damage],
-                    [15, 15*Prämie1+Versumme1/Hauswert1*damage, 15*Prämie2+Versumme2/Hauswert2*damage]
+                    ['Jahre', 'P1', 'P2'],
+                    [1, 1*Prämie1+damage-Versumme1/Hauswert*damage, 1*Prämie2+damage-Versumme2/Hauswert*damage],
+                    [2, 2*Prämie1+damage-Versumme1/Hauswert*damage, 2*Prämie2+damage-Versumme2/Hauswert*damage],
+                    [5, 5*Prämie1 +damage-Versumme1/Hauswert*damage,5*Prämie2+damage-Versumme2/Hauswert*damage],
+                    [10, 10*Prämie1+damage-Versumme1/Hauswert*damage, 10*Prämie2+damage-Versumme2/Hauswert*damage],
+                    [15, 15*Prämie1+damage-Versumme1/Hauswert*damage, 15*Prämie2+damage-Versumme2/Hauswert*damage]
                   ]
         )
             } else {
@@ -100,17 +112,13 @@ function Comparer () {
             
             <Col className='result '>
             <Chart 
-                chartType="Bar"
+                chartType="BarChart"
                 data={data}
-  
-                options={{
-    
-    
-    
-                }}
+                 
+                options={options}
             />
             <input type="text" placeholder="Schaden eingeben" value={damage} onChange={(event) => handleInputChange(event, setDamage)}/>
-            <input type="text" placeholder="Hauswert eingeben" value={Hauswert2} onChange={(event) => handleInputChange(event, setHausw2)}/>            
+            <input type="text" placeholder="Hauswert eingeben" value={Hauswert} onChange={(event) => handleInputChange(event, setHausw)}/>            
             <button onClick={handleSubmit}></button>         
             </Col>
             
