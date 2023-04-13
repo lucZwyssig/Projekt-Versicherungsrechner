@@ -10,12 +10,12 @@ import Popuper from '../Comps/Popuper.js';
 import Chart from 'react-google-charts';
 
 
-function Comparer () {
+function Comparer () {  
   const [Versumme1, setVersumme1] = useState("");
   const [Hauswert, setHausw] = useState("");
   const [Prämie1, setPrämie1] = useState("");
   const [Versumme2, setVersumme2] = useState("");
- 
+  
   const [Prämie2, setPrämie2] = useState("");
   const [damage,setDamage] = useState("");
   
@@ -39,10 +39,25 @@ function Comparer () {
     const options = {
       
         width: "100%",
+        
+    bar: { groupWidth: '150%',
+            alignment: 'center'
+},
         backgroundColor: {
-            fill: '#D9D9D9',
-            
+            fill: '#D9D9D9',            
          },
+         vAxis: {
+            format: '###,###'
+          },
+          hAxis: {
+            
+            format: '###,###',
+            viewWindowMode: 'explicit',
+            viewWindow: {
+                max: 10000,
+                min: 0
+            }
+          },
          
      
     };
@@ -51,17 +66,26 @@ function Comparer () {
         
         
         if (Hauswert != 0 ){
-          //fix data
+            
+            const versumme = Math.min(parseInt(Versumme1), parseInt(Hauswert));
+            const damageNum = parseInt(damage);
+            const hauswertNum = parseInt(Hauswert);
+            const prämie1Num = parseInt(Prämie1);
+            const versumme2 = Math.min(parseInt(Versumme2), parseInt(Hauswert));
+            const prämie2Num = parseInt(Prämie2);
+            
+            
         setData(
             [
                     ['Jahre', 'P1', 'P2'],
-                    [1, 1*Prämie1+damage-Versumme1/Hauswert*damage, 1*Prämie2+damage-Versumme2/Hauswert*damage],
-                    [2, 2*Prämie1+damage-Versumme1/Hauswert*damage, 2*Prämie2+damage-Versumme2/Hauswert*damage],
-                    [5, 5*Prämie1 +damage-Versumme1/Hauswert*damage,5*Prämie2+damage-Versumme2/Hauswert*damage],
-                    [10, 10*Prämie1+damage-Versumme1/Hauswert*damage, 10*Prämie2+damage-Versumme2/Hauswert*damage],
-                    [15, 15*Prämie1+damage-Versumme1/Hauswert*damage, 15*Prämie2+damage-Versumme2/Hauswert*damage]
-                  ]
+                    [1, prämie1Num + damageNum - (versumme / hauswertNum) * damageNum, prämie2Num + damageNum - (versumme2 / hauswertNum) * damageNum],
+                    [2, 2 * prämie1Num + damageNum - (versumme / hauswertNum) * damageNum, 2 * prämie2Num + damageNum - (versumme2 / hauswertNum) * damageNum],
+                    [5, 5 * prämie1Num + damageNum - (versumme / hauswertNum) * damageNum,5 * prämie2Num + damageNum - (versumme2 / hauswertNum) * damageNum],
+                    [10, 10 * prämie1Num + damageNum - (versumme / hauswertNum) * damageNum, 10 * prämie2Num + damageNum - (versumme2 / hauswertNum) * damageNum],
+                    [15, 15 * prämie1Num + damageNum - (versumme / hauswertNum) * damageNum, 15 * prämie2Num + damageNum - (versumme2 / hauswertNum) * damageNum]
+                  ] 
         )
+                
             } else {
                 alert("Wert von 0 ist nicht möglich!");
             }
@@ -77,10 +101,6 @@ function Comparer () {
         setValue(value);
     }
     }
-    
-    
-    
-    
         
     return(
         <div>
