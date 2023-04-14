@@ -7,6 +7,7 @@ import "../CSS.css"
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 import Popuper from '../Comps/Popuper.js';
+import Footer from '../Comps/Footer.js'
 
 
  // change variable names to english
@@ -74,12 +75,19 @@ function Calculator () {
                     
                         <input className='inputbutton' type="text" placeholder="Hauswert eingeben" value={Hauswert} onChange={(event) => handleInputChange(event, setHausw)}/>
                         <br/>
+                        <div>
                         
                         <input className='inputbutton' type="submit" value="submit" />
+                        
+                
+                <Popuper/>
+                </div>
+                
                     
                     
                     
                 </form>
+                
               
               
             </Col>
@@ -88,6 +96,7 @@ function Calculator () {
               
             </Col>
          </Row>
+         <Footer/>
         </Container>
       </div>
       );

@@ -30,6 +30,7 @@ body{
     
     
 } 
+
 .instruction{
     background-color: #827390;
 }
@@ -45,13 +46,15 @@ input[type='text']{
     
 }
 
-input[type='text'], button, input[type='submit']{
+input[type='text'], button, input[type='submit'], input[type='button']{
     background-color: #39708A;
     border: solid;
     border-color: black;
+    border-width: 2px;
     margin: 3px;
     
 }
+
 
 input:focus{
     border-color: rgb(0, 0, 0);
@@ -61,7 +64,7 @@ input:focus{
 .modal, .overlay {
     width: 100vw;
     height: 100vh;
-    top: 0;
+    top: 0; 
     left: 0;
     right: 0;
     bottom: 0;
@@ -73,6 +76,7 @@ input:focus{
 
 .overlay {
     background: rgba(176, 162, 162, 0.8);
+    
 }
 .popperstuff {
     position: absolute;
@@ -81,7 +85,7 @@ input:focus{
     transform: translate(-50%, -50%);
     border: solid;
     border-radius: 3px;
-    background-color: white;
+    background-color: #9d8cac;
     padding: 6%;
 }
 .nav-link{
@@ -114,6 +118,22 @@ a{
     
 
 }
+#footer{
+    display: flex;
+    justify-content: center;
+    
+}
+
+th, td {
+    padding: 15px;
+} 
+
+  table td + td{ border-left:2px solid gray;
+    padding-bottom: 10px; 
+}
+th {
+    text-decoration: underline;
+}
 
 .bootstrap_container {
     
@@ -121,6 +141,6 @@ a{
     padding-left: 8%;
     
     margin-top: 100px;
-    
+
     
 }

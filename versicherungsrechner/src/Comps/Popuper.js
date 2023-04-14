@@ -34,11 +34,11 @@ function MYPopup(props) {
           <div className='popperstuff'>
             <ul>
               {saves.map((singlesave) =>(
-                <li key={singlesave._id}>{singlesave.premium}{singlesave.versum} <button onClick={(e) => console.log(singlesave)}></button></li>
+                <li key={singlesave._id}>{singlesave.premium}{singlesave.versum} <button onClick={(e) => console.log(singlesave)}>Einfügen</button></li>
                 
               ))}
             </ul>
-            <input type="button" onClick={(e) => toggle()} />
+            <input id='savesbutton' type="button" onClick={(e) => toggle()} value="Schliessen"/>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@ function MYPopup(props) {
 
   return (
     <div>
-      <input type="button" id='popbutton'  value="change size of this button" onClick={(e) => toggle()} />
+      <input type="button" id='popbutton'  value="Saves " onClick={(e) => toggle()} />
     </div>
   );
 }
