@@ -64,20 +64,20 @@ function Calculator () {
                 </Row>
             
             <Row className='row'>
-              <Col className='col col-12 col-md-6 'id='colform'>
+              <Col className='col col-12 col-md-5 'id='colform'>
                 <form onSubmit={handleSubmit}>
                     <br/>
-                        <input className='inputbutton' type="text" placeholder="Versicherungssumme eingeben" value={Versumme} onChange={(event) => handleInputChange(event, setVersumme)}/>
+                        <input className='inputbutton wideinput' type="text" placeholder="Versicherungssumme eingeben" value={Versumme} onChange={(event) => handleInputChange(event, setVersumme)}/>
                         <br/>
                     
-                        <input className='inputbutton' type="text" placeholder="Schaden eingeben" value={Schaden} onChange={(event) => handleInputChange(event, setSchaden)}/>
+                        <input className='inputbutton wideinput' type="text" placeholder="Schaden eingeben" value={Schaden} onChange={(event) => handleInputChange(event, setSchaden)}/>
                         <br/>
                     
-                        <input className='inputbutton' type="text" placeholder="Hauswert eingeben" value={Hauswert} onChange={(event) => handleInputChange(event, setHausw)}/>
+                        <input className='inputbutton wideinput' type="text" placeholder="Hauswert eingeben" value={Hauswert} onChange={(event) => handleInputChange(event, setHausw)}/>
                         <br/>
                         <div>
                         
-                        <input className='inputbutton' type="submit" value="submit" />
+                        <input className='inputbutton wideinput' type="submit" value="submit" />
                         
                 
                 <Popuper/>
@@ -91,7 +91,7 @@ function Calculator () {
               
               
             </Col>
-            <Col className='col col-5.9' id='result'>
+            <Col className='col col-5.9' id='damageresult'>
               <p><b>Die Versicherung wird {damage} Franken bezahlen. </b> <br/> {überunter}  </p>
               
             </Col>

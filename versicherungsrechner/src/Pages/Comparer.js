@@ -6,6 +6,7 @@ import {Row, Col} from 'react-bootstrap'
 import { useState } from 'react';
 import Popuper from '../Comps/Popuper.js';
 import Chart from 'react-google-charts';
+import Footer from '../Comps/Footer.js';
 
 
 function Comparer () {  
@@ -42,7 +43,7 @@ function Comparer () {
             alignment: 'center'
 },
         backgroundColor: {
-            fill: '#F8B595',            
+            fill: '#C06C84',            
          },
          vAxis: {
             format: '###,###'
@@ -103,7 +104,7 @@ function Comparer () {
     return(
         <div>
             <Header/>
-            <Container fluid>
+            <Container fluid className='bootstrap_container'>
             <Row className='row'>
             <Col className='col instruction' >
           <Instruction shorttext='Lorem ips. Nuvida nisl elit, eget consequat' 
@@ -111,47 +112,40 @@ function Comparer () {
           </Col>
           </Row>
           <Row className='row'>
-            <Col className='colform '>
-            
-                    <Col className='mor'>
-                        <input type="text" placeholder="Versicherungssumme eingeben" value={Versumme1} onChange={(event) => handleInputChange(event, setVersumme1)}/>
-                    </Col>
-                    <Col className='mor'>
-                        <input type="text" placeholder="Prämie eingeben" value={Prämie1} onChange={(event) => handleInputChange(event, setPrämie1)}/>
-                    </Col>
+            <Col className='colform  col-sm-3' id='compare1'>
+                               
+                <input className='wideinput' type="text" placeholder="Versicherungssumme eingeben" value={Versumme1} onChange={(event) => handleInputChange(event, setVersumme1)}/>  
                     
-                    
-                    
-                
+                <input className='wideinput' type="text" placeholder="Prämie eingeben" value={Prämie1} onChange={(event) => handleInputChange(event, setPrämie1)}/>  
               
-              <Popuper exportSave={handleExportSave}/>
+              <Popuper/>
             </Col>
             
             
-            <Col className='result '>
+            <Col id='compareresult' className='col-6 col-sm-5'>
             <Chart 
                 chartType="BarChart"
                 data={data}
                  
                 options={options}
             />
-            <input type="text" placeholder="Schaden eingeben" value={damage} onChange={(event) => handleInputChange(event, setDamage)}/>
-            <input type="text" placeholder="Hauswert eingeben" value={Hauswert} onChange={(event) => handleInputChange(event, setHausw)}/>            
-            <button onClick={handleSubmit}></button>         
+            <input className='compresultinput' type="text" placeholder="Schaden eingeben" value={damage} onChange={(event) => handleInputChange(event, setDamage)}/>
+            <input className='compresultinput' type="text" placeholder="Hauswert eingeben" value={Hauswert} onChange={(event) => handleInputChange(event, setHausw)}/>            
+            <button className='compresultinput'  onClick={handleSubmit}>Berechnen</button>         
             </Col>
             
             
-            <Col className='colform '>
+            <Col className='colform col-sm-3 '>
             
-                    <Col className='mor'>
-                        <input type="text" placeholder="Versicherungssumme eingeben" value={Versumme2} onChange={(event) => handleInputChange(event, setVersumme2)}/>
-                    </Col> 
-                    <Col className='mor'>
-                        <input type="text" placeholder="Prämie eingeben" value={Prämie2} onChange={(event) => handleInputChange(event, setPrämie2)}/>
-                    </Col>            
+                <input className='wideinput' type="text" placeholder="Versicherungssumme eingeben" value={Versumme2} onChange={(event) => handleInputChange(event, setVersumme2)}/>
+                    
+                    
+                <input className='wideinput' type="text" placeholder="Prämie eingeben" value={Prämie2} onChange={(event) => handleInputChange(event, setPrämie2)}/>
+                     
+                <Popuper/>          
             </Col>
           </Row>
-
+          <Footer/>
         </Container>
 
         </div>
