@@ -1,6 +1,4 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { Link } from 'react-router-dom';
+
 import Header from '../Comps/Header.js';
 import { Container } from 'react-bootstrap';
 import Instruction from '../Comps/Instructions.js';
@@ -44,7 +42,7 @@ function Comparer () {
             alignment: 'center'
 },
         backgroundColor: {
-            fill: '#D9D9D9',            
+            fill: '#F8B595',            
          },
          vAxis: {
             format: '###,###'
@@ -107,7 +105,7 @@ function Comparer () {
             <Header/>
             <Container fluid>
             <Row className='row'>
-            <Col className='col'>
+            <Col className='col instruction' >
           <Instruction shorttext='Lorem ips. Nuvida nisl elit, eget consequat' 
           longtext='sed ante pretium consequat eu eget odio. Nullam pulvinar, felis vitae consequat tincidunt, augue libero blandit lorem, a auctor felis turpis eget ipsum. Nulla ultricies sapien felis, vel accumsan arcu volutpat nec. Phasellus sit amet mollis nibh. Fusce porttitor condimentum libero, at efficitur eros luctus id. Nullam mi lacus, fringilla in aliquam nec, imperdiet non magna. Morbi egestas risus in metus commodo suscipit. Curabitur ipsum sem, commodo quis sem nec, vulputate lacinia sem. Ut consequat lectus quis laoreet bibendum. Mauris maximus bibendum faucibus. Nam finibus mi vitae lorem dapibus, sit amet porttitor tortor tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. ' />
           </Col>

@@ -13,7 +13,7 @@ function Header () {
         <Navbar>
         <Container fluid>
             <Navbar.Brand href='/'>
-                Versicherungsapp
+            Sandsturm Enterprises Versicherung 
             </Navbar.Brand>
             <Nav className='navbar-nav d-flex align-items-center' >
                 <Nav.Link href='/calculator'>Rechner</Nav.Link>

@@ -1,40 +1,61 @@
-
 body{
-    background-color: aliceblue;
+    background-image: url(Images/backg.png);
+    background-size: cover;
+    background-color: #F8B595;
+    background-repeat: no-repeat;
+    background-position: top;
+    
+    
 }
 #mor{
     background-color: gray;
 }
 
 .navbar{
-    background-color: rgb(158, 201, 238);
-    height: 50px ;
+    height: 50px;
+    background-color: #6c5b7c;
     
     
 }
-input{
-
+.row{
+    margin-bottom: 40px;
+}
+.col{
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: rgba(233, 15, 15, 0);
+    margin: 5px;
+    margin-right: 5px;
     
     
-    text-align: center;
-    appearance: textfield;
-    border: 3px solid #ccc; 
-  padding: 10px; 
-  font-size: 16px;
-  
-  width: min-content; 
-
+} 
+.instruction{
+    background-color: #827390;
 }
-#comparerow{
-    margin-left: 100px;
-    margin-right: 100px ;
+#colform{
+    display: flex;
+    
+    
 }
 
-#popbutton{
-    margin-top: 50%;
-    width: min-content;
+input[type='text']{    
+    appearance: textfield;  
+    width: 120%;
+    
 }
 
+input[type='text'], button, input[type='submit']{
+    background-color: #39708A;
+    border: solid;
+    border-color: black;
+    margin: 3px;
+    
+}
+
+input:focus{
+    border-color: rgb(0, 0, 0);
+}
 
 
 .modal, .overlay {
@@ -48,10 +69,7 @@ input{
     justify-content: center;
     z-index: 9999;
 }
-#rowcompare{
-    margin-left: 100px;
-    margin-right: 100px;
-}
+
 
 .overlay {
     background: rgba(176, 162, 162, 0.8);
@@ -75,23 +93,7 @@ input{
     border-radius: 3px;
 }
 
-input:focus{
-    border-color: rgb(0, 0, 0);
-   
 
-}
-
-
-.col{
-    border-style: solid;
-    border-radius: 5px;
-    border-width: 2px;
-    border-color: rgba(217, 217, 217, 0);
-    margin: 5px;
-    margin-right: 5px;
-    background-color: rgb(217,217,217);
-    
-} 
 
 a:active {
     color: rgb(118, 116, 101);
@@ -104,13 +106,19 @@ a{
     font-family: fantasy;
 }
 #result{
-    background-color: rgb(180, 132, 132);
+    display: flex;
+    background-color: #c06c84;
+    border: solid;
+    border-color: rgb(54, 54, 54);
+    align-items: center;
+    
+
 }
 
 .bootstrap_container {
     
-    padding-right: 10%;
-    padding-left: 10%;
+    padding-right: 8%;
+    padding-left: 8%;
     
     margin-top: 100px;
     

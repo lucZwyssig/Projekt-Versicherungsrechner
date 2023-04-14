@@ -18,23 +18,30 @@ function Calculator () {
     const [Versumme, setVersumme] = useState("");
     const [Schaden, setSchaden] = useState("");
     const [Hauswert, setHausw] = useState("");
-    const [Prämie, setPrämie] = useState("");
+    const [überunter, setüberunter] = useState("");
     
     
     const handleSubmit = (event) => {
       event.preventDefault();
 
-      const versummeNumber = parseFloat(Versumme);
+      const versummeNumber = Math.min(parseInt(Versumme), parseInt(Hauswert));
       const hauswertNumber = parseFloat(Hauswert);
       const schadenNumber = parseFloat(Schaden);
-      const prämieNumber = parseFloat(Prämie);
-
+      
       if (hauswertNumber === 0) {
-          return;
+          alert("Hauswert kann nicht 0 sein");
       } else {
-          setdamage(versummeNumber/hauswertNumber*schadenNumber);
+          setdamage(Math.floor( versummeNumber/hauswertNumber*schadenNumber));
           
       }
+      if (parseFloat(Versumme) === hauswertNumber) {
+        setüberunter("Sie sind optimal versichert");
+      } else if (parseFloat(Versumme) < hauswertNumber) {
+        setüberunter("Sie sind unterversichert. Vergrössern Sie die Versicherungssumme um optimal versichert zu sein.");
+      } else {
+        setüberunter("Sie sind überversichert. Verkleinern Sie die Versicherungssumme um optimal versichert zu sein.");
+      }
+      
   }
   function handleInputChange(event, setValue) {
     const value = event.target.value;
@@ -46,33 +53,39 @@ function Calculator () {
       return (
       <div>
         <Header/>
-        <Container fluid className='bootstrap_container'>             
-          <Row className='row'>
-            <Col className='col'>
-              <Instruction shorttext='Lorem ips. Nuvida nisl elit, eget consequat' 
-                longtext='sed ante pretium consequat eu eget odio. Nullam pulvinar, felis vitae consequat tincidunt, augue libero blandit lorem, a auctor felis turpis eget ipsum. Nulla ultricies sapien felis, vel accumsan arcu volutpat nec. Phasellus sit amet mollis nibh. Fusce porttitor condimentum libero, at efficitur eros luctus id. Nullam mi lacus, fringilla in aliquam nec, imperdiet non magna. Morbi egestas risus in metus commodo suscipit. Curabitur ipsum sem, commodo quis sem nec, vulputate lacinia sem. Ut consequat lectus quis laoreet bibendum. Mauris maximus bibendum faucibus. Nam finibus mi vitae lorem dapibus, sit amet porttitor tortor tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. ' />
-            </Col>
+        <Container fluid className='bootstrap_container'> 
+        <Row className='row'>
+            <Col className='col instruction'>        
           
-          
-            <Col className='col'id='colform'>
-            <form onSubmit={handleSubmit}>
-                    <Col className='mor'>
-                        <input type="text" placeholder="Versicherungssumme eingeben" value={Versumme} onChange={(event) => handleInputChange(event, setVersumme)}/>
-                    </Col>
-                    <Col className='mor'>
-                        <input type="text" placeholder="Schaden eingeben" value={Schaden} onChange={(event) => handleInputChange(event, setSchaden)}/>
-                    </Col>
-                    <Col className='mor'>
-                        <input type="text" placeholder="Hauswert eingeben" value={Hauswert} onChange={(event) => handleInputChange(event, setHausw)}/>
-                    </Col>
+              <Instruction shorttext='Mit diesem Tool können Sie den bezahlter Schaden eines Hausrats berechnen.' 
+                longtext='Als Eingaben mössen sie 4 nötige Werte eingeben. Als erstes die Versicherungssumme. Die Versicherungssumme ist die mit dem Versicherungsunternehmen vereinbarten Betrag, den die Versicherung maximal bezahlen wird. Als nächstes den Betrag des Schadens der entstanden ist. Zuletzt muss auch der Hauswert noch eingegeben werden. Dieser ist der Wert des Hauses und seine Gegenstände.  ' />
+                </Col>
+                </Row>
+            
+            <Row className='row'>
+              <Col className='col col-12 col-md-6 'id='colform'>
+                <form onSubmit={handleSubmit}>
+                    <br/>
+                        <input className='inputbutton' type="text" placeholder="Versicherungssumme eingeben" value={Versumme} onChange={(event) => handleInputChange(event, setVersumme)}/>
+                        <br/>
                     
-                    <input type="submit" value="submit" />
+                        <input className='inputbutton' type="text" placeholder="Schaden eingeben" value={Schaden} onChange={(event) => handleInputChange(event, setSchaden)}/>
+                        <br/>
+                    
+                        <input className='inputbutton' type="text" placeholder="Hauswert eingeben" value={Hauswert} onChange={(event) => handleInputChange(event, setHausw)}/>
+                        <br/>
+                        
+                        <input className='inputbutton' type="submit" value="submit" />
+                    
+                    
+                    
                 </form>
               
-              <Popuper/>
+              
             </Col>
-            <Col className='col' id='result'>
-              {damage}
+            <Col className='col col-5.9' id='result'>
+              <p><b>Die Versicherung wird {damage} Franken bezahlen. </b> <br/> {überunter}  </p>
+              
             </Col>
          </Row>
         </Container>
