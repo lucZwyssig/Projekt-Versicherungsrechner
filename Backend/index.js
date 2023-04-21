@@ -12,6 +12,7 @@ mongoose.connect('mongodb://user:user@localhost:27017/Saves')
   .catch((err) => console.error(err));
 
 const saveSchema = new mongoose.Schema({
+  //change this to be for Schadensrechner + Vergleicher
   test: Number
 });
 

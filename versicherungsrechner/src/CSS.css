@@ -17,6 +17,7 @@ body{
     
     
 }
+
 .row{
     margin-bottom: 40px;
 }
@@ -25,8 +26,7 @@ body{
     border-radius: 5px;
     border-width: 2px;
     border-color: rgba(233, 15, 15, 0);
-    margin: 5px;
-    margin-right: 5px;
+    
     
     
 } 
@@ -62,8 +62,8 @@ input[type='text'], button, input[type='submit'], input[type='button']{
 }
 
 
-input:focus{
-    border-color: rgb(0, 0, 0);
+input:hover, button:hover{
+    background-color: #31596c;
 }
 
 
@@ -116,8 +116,8 @@ a{
     text-decoration: none;
     font-family: fantasy;
 }
-#compare1{
-    margin-right: 5%;
+.compare{
+    padding-right: 5%;
 }
 #damageresult{
     display: flex;
@@ -130,17 +130,18 @@ a{
     
 
 }
+
 #compareresult{
     display: grid;
     background-color: #c06c84;
     border: solid;
     border-color: rgb(54, 54, 54);
-    align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 3px;
+    grid-template-rows: 1;
+    grid-template-columns: 3;
+}
+#chart{
     
-    
+    overflow: hidden;
 
 }
 .compresultinput{

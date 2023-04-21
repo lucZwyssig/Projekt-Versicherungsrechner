@@ -46,7 +46,7 @@ function Calculator () {
   }
   function handleInputChange(event, setValue) {
     const value = event.target.value;
-    const isValidInput = /^\d*$/.test(value);
+    const isValidInput = /^\d*$/.test(value); //regex für Zahlen 0-9
     if (isValidInput) {
         setValue(value);
     }
@@ -64,34 +64,22 @@ function Calculator () {
                 </Row>
             
             <Row className='row'>
-              <Col className='col col-12 col-md-5 'id='colform'>
+              <Col className='col col-12 col-md-6 'id='colform'>
                 <form onSubmit={handleSubmit}>
                     <br/>
-                        <input className='inputbutton wideinput' type="text" placeholder="Versicherungssumme eingeben" value={Versumme} onChange={(event) => handleInputChange(event, setVersumme)}/>
-                        <br/>
-                    
-                        <input className='inputbutton wideinput' type="text" placeholder="Schaden eingeben" value={Schaden} onChange={(event) => handleInputChange(event, setSchaden)}/>
-                        <br/>
-                    
-                        <input className='inputbutton wideinput' type="text" placeholder="Hauswert eingeben" value={Hauswert} onChange={(event) => handleInputChange(event, setHausw)}/>
-                        <br/>
-                        <div>
-                        
-                        <input className='inputbutton wideinput' type="submit" value="submit" />
-                        
-                
-                <Popuper/>
-                </div>
-                
-                    
-                    
-                    
-                </form>
-                
-              
-              
+                      <input className='inputbutton wideinput' type="text" placeholder="Versicherungssumme eingeben" value={Versumme} onChange={(event) => handleInputChange(event, setVersumme)}/>
+                    <br/>
+                      <input className='inputbutton wideinput' type="text" placeholder="Schaden eingeben" value={Schaden} onChange={(event) => handleInputChange(event, setSchaden)}/>
+                    <br/>
+                      <input className='inputbutton wideinput' type="text" placeholder="Hauswert eingeben" value={Hauswert} onChange={(event) => handleInputChange(event, setHausw)}/>
+                    <br/>
+                  <div>
+                    <input className='inputbutton wideinput' type="submit" value="submit" />
+                    <Popuper/>
+                  </div>      
+                </form> 
             </Col>
-            <Col className='col col-5.9' id='damageresult'>
+            <Col className='col col-6' id='damageresult'>
               <p><b>Die Versicherung wird {damage} Franken bezahlen. </b> <br/> {überunter}  </p>
               
             </Col>

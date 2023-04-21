@@ -39,7 +39,7 @@ function Comparer () {
       
         width: "100%",
         
-    bar: { groupWidth: '150%',
+    bar: { groupWidth: '200%',
             alignment: 'center'
 },
         backgroundColor: {
@@ -107,12 +107,12 @@ function Comparer () {
             <Container fluid className='bootstrap_container'>
             <Row className='row'>
             <Col className='col instruction' >
-          <Instruction shorttext='Lorem ips. Nuvida nisl elit, eget consequat' 
-          longtext='sed ante pretium consequat eu eget odio. Nullam pulvinar, felis vitae consequat tincidunt, augue libero blandit lorem, a auctor felis turpis eget ipsum. Nulla ultricies sapien felis, vel accumsan arcu volutpat nec. Phasellus sit amet mollis nibh. Fusce porttitor condimentum libero, at efficitur eros luctus id. Nullam mi lacus, fringilla in aliquam nec, imperdiet non magna. Morbi egestas risus in metus commodo suscipit. Curabitur ipsum sem, commodo quis sem nec, vulputate lacinia sem. Ut consequat lectus quis laoreet bibendum. Mauris maximus bibendum faucibus. Nam finibus mi vitae lorem dapibus, sit amet porttitor tortor tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. ' />
+          <Instruction shorttext='Mit diesem Tool können Sie zwei Prämien vergleichen' 
+          longtext='Als Eingaben müssen Sie einen Schaden festlegen,  ' />
           </Col>
           </Row>
           <Row className='row'>
-            <Col className='colform  col-sm-3' id='compare1'>
+            <Col className='colform compare  col-12 col-md-3' >
                                
                 <input className='wideinput' type="text" placeholder="Versicherungssumme eingeben" value={Versumme1} onChange={(event) => handleInputChange(event, setVersumme1)}/>  
                     
@@ -122,20 +122,23 @@ function Comparer () {
             </Col>
             
             
-            <Col id='compareresult' className='col-6 col-sm-5'>
-            <Chart 
-                chartType="BarChart"
-                data={data}
+            <Col id='compareresult' className=' col-12 col-md-6'>
+                <div id='chart'>
+                    <Chart 
+                        chartType="BarChart"
+                        data={data}
+                
                  
-                options={options}
-            />
+                        options={options}
+                    />
+            </div>
             <input className='compresultinput' type="text" placeholder="Schaden eingeben" value={damage} onChange={(event) => handleInputChange(event, setDamage)}/>
             <input className='compresultinput' type="text" placeholder="Hauswert eingeben" value={Hauswert} onChange={(event) => handleInputChange(event, setHausw)}/>            
             <button className='compresultinput'  onClick={handleSubmit}>Berechnen</button>         
             </Col>
             
             
-            <Col className='colform col-sm-3 '>
+            <Col className='colform col-12 col-md-3 compare'>
             
                 <input className='wideinput' type="text" placeholder="Versicherungssumme eingeben" value={Versumme2} onChange={(event) => handleInputChange(event, setVersumme2)}/>
                     

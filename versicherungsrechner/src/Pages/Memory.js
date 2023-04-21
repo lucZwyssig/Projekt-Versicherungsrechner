@@ -1,26 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import { Container } from 'react-bootstrap';
+
+import Row from 'react-bootstrap/esm/Row';
+import Col from 'react-bootstrap/esm/Col';
+
 
 
 function Memory () {
     return(
-        <div>
-            <ul>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/calculator">Rechner</Link>
-                </li>
-                <li>
-                    <Link to="/comparer">Rechner</Link>
-                </li>                
-            </ul>
-
-            
-            
-        </div>
+        <Container fluid>
+        <Row>
+            <Col className='col-4'>fff
+            </Col>
+            <Col className='col-4'>fff
+            </Col>
+            <Col className='col-4'>fff
+            </Col>
+        </Row>
+        <Row>
+            <Col className='col-4'>fff
+            </Col>
+            <Col className='col-4'>fff
+            </Col>
+            <Col className='col-4'>fff
+            </Col>
+        </Row>
+        </Container>
     )
 }
 export default Memory;
