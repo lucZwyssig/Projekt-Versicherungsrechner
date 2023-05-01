@@ -7,6 +7,7 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 - Speicherfunktion hinzufügen
 - Speicheroption realisieren
 - Home Page Realisieren
+- TODO-File erstellen
 ###  Priority 3
 - Memory Teil realisieren
 - Anleitungen, evt. Erklärvideos erstellen

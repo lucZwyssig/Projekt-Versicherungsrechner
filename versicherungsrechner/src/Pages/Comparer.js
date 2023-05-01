@@ -34,6 +34,7 @@ function Comparer () {
         [10, 0, 0],
         [15, 0, 0]
       ]);
+    const [width,setwidth] = useState(100);
 
     const options = {
       
@@ -53,7 +54,7 @@ function Comparer () {
             format: '###,###',
             viewWindowMode: 'explicit',
             viewWindow: {
-                max: 10000,
+                max: width,
                 min: 0
             }
           },
@@ -62,6 +63,7 @@ function Comparer () {
     };
     const handleSubmit = (event) => {
         event.preventDefault();
+        setwidth(data.max);
         
         
         if (Hauswert != 0 ){
@@ -107,8 +109,8 @@ function Comparer () {
             <Container fluid className='bootstrap_container'>
             <Row className='row'>
             <Col className='col instruction' >
-          <Instruction shorttext='Mit diesem Tool können Sie zwei Prämien vergleichen' 
-          longtext='Als Eingaben müssen Sie einen Schaden festlegen,  ' />
+          <Instruction shorttext='Mit diesem Tool können Sie zwei Prämien vergleichen. ' 
+          longtext='Als Eingaben müssen Sie einen Schaden festlegen, einen Hautwert  und zwei verschiedene Prämienkosten  ' />
           </Col>
           </Row>
           <Row className='row'>
