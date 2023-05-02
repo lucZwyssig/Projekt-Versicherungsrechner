@@ -149,6 +149,9 @@ a{
     position: relative;
     justify-self: center;
 }
+.memoryitem:hover{
+    cursor: pointer;
+}
 
 #footer{
     display: flex;
@@ -173,6 +176,4 @@ th {
     padding-left: 8%;
     
     margin-top: 100px;
-
-    
 }
