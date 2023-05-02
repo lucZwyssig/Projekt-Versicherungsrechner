@@ -8,15 +8,14 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 - Speicheroption realisieren
 - Home Page Realisieren
 - TODO-File erstellen
+- Spiel realisieren
 ###  Priority 3
-- Memory Teil realisieren
 - Anleitungen, evt. Erklärvideos erstellen
 - css fertig realisieren
 
 ## DOING
 
-- Speicherfunktion hinzufügen
-- Speicheroption realisieren
+- Spiel realisieren
 
 ## DONE
 - Git Repo erstellt 
