@@ -149,9 +149,6 @@ a{
     position: relative;
     justify-self: center;
 }
-.memoryitem:hover{
-    cursor: pointer;
-}
 
 #footer{
     display: flex;
