@@ -3,7 +3,7 @@ import Header from '../Comps/Header.js';
 import { Container } from 'react-bootstrap';
 import Instruction from '../Comps/Instructions.js';
 import {Row, Col} from 'react-bootstrap'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Popuper from '../Comps/Popuper.js';
 import Chart from 'react-google-charts';
 import Footer from '../Comps/Footer.js';
@@ -14,17 +14,15 @@ function Comparer () {
   const [Hauswert, setHausw] = useState("");
   const [Prämie1, setPrämie1] = useState("");
   const [Versumme2, setVersumme2] = useState("");
-  
   const [Prämie2, setPrämie2] = useState("");
   const [damage,setDamage] = useState("");
+  const [userdata1, setuserdata1] = useState({});
+  const [userdata2, setuserdata2] = useState({}); // continue here
+ 
   
   
 
-  function handleExportSave(save) {
-    
-    
-    
-  }
+  
   
    const [data, setData] = useState([
         ['Jahre', 'P1', 'P2'],
@@ -120,7 +118,7 @@ function Comparer () {
                     
                 <input className='wideinput' type="text" placeholder="Prämie eingeben" value={Prämie1} onChange={(event) => handleInputChange(event, setPrämie1)}/>  
               
-              <Popuper/>
+              <Popuper setuserdata={setuserdata1}/>
             </Col>
             
             
@@ -147,7 +145,7 @@ function Comparer () {
                     
                 <input className='wideinput' type="text" placeholder="Prämie eingeben" value={Prämie2} onChange={(event) => handleInputChange(event, setPrämie2)}/>
                      
-                <Popuper/>          
+                <Popuper setuserdata={setuserdata2}/>          
             </Col>
           </Row>
           <Footer/>

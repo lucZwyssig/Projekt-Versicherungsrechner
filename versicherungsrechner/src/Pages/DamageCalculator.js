@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container } from 'react-bootstrap';
 import Header from '../Comps/Header.js';
@@ -20,6 +20,7 @@ function Calculator () {
     const [Schaden, setSchaden] = useState("");
     const [Hauswert, setHausw] = useState("");
     const [überunter, setüberunter] = useState("");
+    const [userdata, setuserdata] = useState({});
     
     
     const handleSubmit = (event) => {
@@ -50,7 +51,14 @@ function Calculator () {
     if (isValidInput) {
         setValue(value);
     }
+    
 }
+useEffect(() => {
+  setHausw(userdata.hausw);
+  setSchaden(userdata.damage);
+  setVersumme(userdata.versum);
+
+}, [userdata])
       return (
       <div>
         <Header/>
@@ -75,7 +83,7 @@ function Calculator () {
                     <br/>
                   <div>
                     <input className='inputbutton wideinput' type="submit" value="submit" />
-                    <Popuper/>
+                    <Popuper setuserdata={setuserdata}/>
                   </div>      
                 </form> 
             </Col>
