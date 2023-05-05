@@ -1,33 +1,41 @@
-import React, { useEffect, useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import { Container } from 'react-bootstrap';
+import  { useEffect, useState } from 'react';
 
-function Stopwatch() {
+
+function Stopwatch(props) {
   const [isrunning, setisrunning] = useState(false);
   const [time, settime] = useState(0);
   const [interval, setinterval] = useState(null);
+  
 
   useEffect(() => {
     if (isrunning) {
       setinterval(setInterval(() => {
         settime((time) => time + 10);
       }, 10));
+      
     } else {
       clearInterval(interval);
+      props.setendtime(time);
     }
   }, [isrunning]);
 
-  function start() {
+  
+ 
+  useState(() => {
+    
     setisrunning(!isrunning);
+    props.setendtime(time);
     
     
-  }
+  }, [props.playover]);
+  
 
   
 
   return (
     <div>
       {time}
+      
     </div>
   );
 }

@@ -16,8 +16,19 @@
                 "file": "Keyframe_figma.jpg"
               }
             }
+          },
+          {
+            "id": "6b5f4863622f6b10",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.2.7"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -62,12 +73,21 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "b95f1b739b822a2c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e3dc84377a8c10f3",
@@ -144,7 +164,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "621dc35cfadd2913",
+  "active": "6b5f4863622f6b10",
   "lastOpenFiles": [
     "Keyframe_figma.jpg",
     "User2.jpg",

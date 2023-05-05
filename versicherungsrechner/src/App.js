@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Pages/Home';
 import Calculator from './Pages/DamageCalculator';
-import Memory from './Pages/Memory';
+import Memory from './Pages/Game';
 import Comparer from './Pages/Comparer';
 
 function App() {

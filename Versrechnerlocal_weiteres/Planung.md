@@ -9,9 +9,13 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 - Home Page Realisieren
 - TODO-File erstellen
 - Spiel realisieren
+- css fertig realisieren
+
 ###  Priority 3
 - Anleitungen, evt. Erklärvideos erstellen
-- css fertig realisieren
+- Spiel Zeit implementieren
+
+
 
 ## DOING
 
