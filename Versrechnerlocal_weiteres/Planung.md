@@ -4,11 +4,9 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 ### Priority 1
 
 ### Priority 2
-- Speicherfunktion hinzufügen
-- Speicheroption realisieren
 - Home Page Realisieren
 - TODO-File erstellen
-- Spiel realisieren
+
 - css fertig realisieren
 
 ###  Priority 3
@@ -18,8 +16,8 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 
 
 ## DOING
-
-- Spiel realisieren
+- Speicherfunktion hinzufügen
+- Speicheroption realisieren
 
 ## DONE
 - Git Repo erstellt 
@@ -33,6 +31,7 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 - Einfache Datenbank aufbauen
 - Datenbank mit React-App verbinden
 - Aufbau des Vergleichers realisieren
+- Spiel realisieren
 
 ## Arbeit für die nächsten 6 Lektionen
 
