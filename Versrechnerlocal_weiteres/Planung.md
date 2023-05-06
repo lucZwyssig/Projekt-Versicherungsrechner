@@ -16,7 +16,7 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 
 
 ## DOING
-- Speicherfunktion hinzufügen
+
 - Speicheroption realisieren
 
 ## DONE
@@ -32,10 +32,11 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 - Datenbank mit React-App verbinden
 - Aufbau des Vergleichers realisieren
 - Spiel realisieren
+- Speicherfunktion hinzufügen
 
 ## Arbeit für die nächsten 6 Lektionen
 
-- Speicherfunktion hinzufügen
+
 - Speicheroption realisieren
 - Home Page Realisieren
 
