@@ -83,7 +83,7 @@ useEffect(() => {
                     <br/>
                   <div>
                     <input className='inputbutton wideinput' type="submit" value="submit" />
-                    <Popuper setuserdata={setuserdata}/>
+                    <Popuper setuserdata={setuserdata} />
                   </div>      
                 </form> 
             </Col>

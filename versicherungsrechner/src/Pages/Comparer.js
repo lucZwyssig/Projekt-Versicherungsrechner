@@ -18,6 +18,18 @@ function Comparer () {
   const [damage,setDamage] = useState("");
   const [userdata1, setuserdata1] = useState({});
   const [userdata2, setuserdata2] = useState({}); // continue here
+
+  useEffect(() => {
+    setVersumme1(userdata1.versum);
+    setPrämie1(userdata1.premium);
+  }, [userdata1])
+
+  useEffect(() => {
+    setVersumme2(userdata2.versum);
+    setPrämie2(userdata2.premium);
+    setHausw(userdata2.hausw);
+    setDamage(userdata2.damage);
+  }, [userdata2])
  
   
   
@@ -145,7 +157,7 @@ function Comparer () {
                     
                 <input className='wideinput' type="text" placeholder="Prämie eingeben" value={Prämie2} onChange={(event) => handleInputChange(event, setPrämie2)}/>
                      
-                <Popuper setuserdata={setuserdata2}/>          
+                <Popuper setuserdata={setuserdata2} />          
             </Col>
           </Row>
           <Footer/>

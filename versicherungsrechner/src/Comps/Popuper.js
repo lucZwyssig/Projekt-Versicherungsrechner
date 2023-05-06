@@ -14,7 +14,7 @@ function MYPopup(props) {
 
   async function fetchsaves() {
     try {
-      const response = await axios.get('http://localhost:3001/api/saves');
+      const response = await axios.get(`http://localhost:3001/api/calculator`);
       setsaves(response.data);
     } catch (error) {
       console.error(error);
@@ -43,6 +43,7 @@ function MYPopup(props) {
               ))}
             </ul>
             <input id='savesbutton' type="button" onClick={(e) => toggle()} value="Schliessen"/>
+            
           </div>
         </div>
       </div>
@@ -58,6 +59,7 @@ function MYPopup(props) {
             <p>Schaden: {selectedsave.damage}</p>
             <p>Prämie: {selectedsave.premium}</p>
             <input id='savesbutton' type="button" onClick={(e) => setselectedsave(null)} value="Zurück"/>
+            {props.collection}
           </div>
         </div>
       </div>
