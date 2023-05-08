@@ -6,7 +6,7 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 ### Priority 2
 - Home Page Realisieren
 - TODO-File erstellen
-
+- Clean code implementieren (variablennamen ändern === anstatt == etc, Kommentare)
 - css fertig realisieren
 
 ###  Priority 3

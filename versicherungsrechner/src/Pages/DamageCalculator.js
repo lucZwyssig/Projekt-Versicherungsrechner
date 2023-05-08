@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 import Popuper from '../Comps/Popuper.js';
 import Footer from '../Comps/Footer.js'
+import Enter from '../Comps/Enter.js';
 
 
  // change variable names to english
@@ -21,6 +22,7 @@ function Calculator () {
     const [Hauswert, setHausw] = useState("");
     const [überunter, setüberunter] = useState("");
     const [userdata, setuserdata] = useState({});
+    
     
     
     const handleSubmit = (event) => {
@@ -51,7 +53,6 @@ function Calculator () {
     if (isValidInput) {
         setValue(value);
     }
-    
 }
 useEffect(() => {
   setHausw(userdata.hausw);
@@ -84,6 +85,7 @@ useEffect(() => {
                   <div>
                     <input className='inputbutton wideinput' type="submit" value="submit" />
                     <Popuper setuserdata={setuserdata} />
+                    <Enter hausw={200} versum={22} damage={222} premium={333}/> 
                   </div>      
                 </form> 
             </Col>
@@ -92,7 +94,7 @@ useEffect(() => {
               
             </Col>
          </Row>
-         <Footer/>
+         
         </Container>
       </div>
       );

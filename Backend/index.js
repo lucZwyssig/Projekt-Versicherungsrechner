@@ -43,6 +43,25 @@ app.get('/api/game', async (req, res) => {
   res.json(game);
 })
 
+app.post('/api/calculatorpost', async (req, res) => {
+  try {
+    const {name, hausw, versum, damage, premium} = req.body;
+
+    const data = new Calculator({
+      name,
+      hausw,
+      versum,
+      damage,
+      premium
+    });
+
+    const insertdata = await data.save();
+    res.json(insertdata);
+  } catch(error){
+    console.log(error);
+  }
+})
+
 
 
 

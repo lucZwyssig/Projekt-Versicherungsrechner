@@ -1,6 +1,10 @@
+import Enter from "../Comps/Enter";
+
 function Home(){
   return(
     <div>
+       
+      
 
     </div>
   )

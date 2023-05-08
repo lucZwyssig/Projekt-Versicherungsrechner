@@ -42,7 +42,7 @@ function MYPopup(props) {
                 </li>
               ))}
             </ul>
-            <input id='savesbutton' type="button" onClick={(e) => toggle()} value="Schliessen"/>
+            <input id='savesbutton' type="button" onClick={() => toggle()} value="Schliessen"/>
             
           </div>
         </div>
