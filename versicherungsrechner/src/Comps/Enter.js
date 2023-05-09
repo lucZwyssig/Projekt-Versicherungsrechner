@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 function Enter(props) {
@@ -20,15 +20,15 @@ function Enter(props) {
     }
   };
 
-  const handleSubmit = async (event) => {
+  const handleEnterSubmit = async (event) => {
     event.preventDefault();
     
     const formData = {
       name: name,
-      hausw: parseInt(props.hausw),
-      versum: parseInt(props.versum),
-      damage: parseInt(props.damage),
-      premium: parseInt(props.premium)
+      hausw: parseInt(hausw),
+      versum: parseInt(versum),
+      damage: parseInt(damage),
+      premium: parseInt(premium)
     };
   
     await postDataToCalculator(formData);
@@ -42,36 +42,37 @@ function Enter(props) {
     }
   }
 
-  if (show) {return (
-
-    <div>
-      <div className='popper'>
-        <div className='overlay'>
-          <div className='popperstuff'>
-            <form onSubmit={handleSubmit}>
-              <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-              <input type="text" value={hausw} onChange={(event) => handleInputChange(event, setHausw)} />
-              <input type="text" value={versum} onChange={(event) => handleInputChange(event, setVersum)} />
-              <input type="text" value={damage} onChange={(event) => handleInputChange(event, setDamage)} />
-              <input type="text" value={premium} onChange={(event) => handleInputChange(event, setPremium)} />
-              <button type="submit">Submit</button>
-            </form>
+  if (show) {
+    return (
+      <div>
+        <div className='popper'>
+          <div className='overlay'>
+            <div className='popperstuff'>
+              <form onSubmit={handleEnterSubmit}>
+                <input type="text" placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
+                <input type="text" placeholder="Hauswert" value={hausw} onChange={(event) => handleInputChange(event, setHausw)} />
+                <input type="text" value={versum} onChange={(event) => handleInputChange(event, setVersum)} />
+                <input type="text" value={damage} onChange={(event) => handleInputChange(event, setDamage)} />
+                <input type="text" value={premium} onChange={(event) => handleInputChange(event, setPremium)} />
+                <button type="submit">Submit</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     );
   }
-  return(
+  return (
     <div>
-        <button onClick={() => {
-            setHausw(props.hausw);
-            setVersum(props.versum);
-            setDamage(props.damage);
-            setPremium(props.premium);
-            setshow(true)}}>Save</button>
+      <button onClick={() => {
+        setHausw(props.hausw);
+        setVersum(props.versum);
+        setDamage(props.damage);
+        setPremium(props.premium);
+        setshow(true);
+      }}>Save</button>
     </div>
-  )
+  );
 }
 
 export default Enter;

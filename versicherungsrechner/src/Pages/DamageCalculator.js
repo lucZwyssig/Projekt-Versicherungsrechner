@@ -73,7 +73,7 @@ useEffect(() => {
         </Row>
             
             <Row className='row'>
-              <Col className='col col-12 col-md-6 'id='colform'>
+              <Col className='col col-12 col-md-4 'id='colform'>
                 <form onSubmit={handleSubmit}>
                     <br/>
                       <input className='inputbutton wideinput' type="text" placeholder="Versicherungssumme eingeben" value={Versumme} onChange={(event) => handleInputChange(event, setVersumme)}/>
@@ -84,10 +84,12 @@ useEffect(() => {
                     <br/>
                   <div>
                     <input className='inputbutton wideinput' type="submit" value="submit" />
-                    <Popuper setuserdata={setuserdata} />
-                    <Enter hausw={200} versum={22} damage={222} premium={333}/> 
                   </div>      
                 </form> 
+            </Col>
+            <Col className='col col-12 col-md-2'>
+                <Popuper setuserdata={setuserdata} />
+                <Enter hausw="99"/> 
             </Col>
             <Col className='col col-6' id='damageresult'>
               <p><b>Die Versicherung wird {damage} Franken bezahlen. </b> <br/> {überunter}  </p>
@@ -100,4 +102,4 @@ useEffect(() => {
       );
 }
 export default Calculator;
-
+//where it should be

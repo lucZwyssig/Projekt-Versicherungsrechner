@@ -9,6 +9,7 @@ import Footer from '../Comps/Footer.js'
 import Stopwatch from '../Comps/Stopwatch.js';
 import Youlost from '../Comps/Youfinished.js';
 import Youfinsished from '../Comps/Youfinished.js';
+import Gamescores from '../Comps/Gamescores.js';
 
 function Game(props) {
   
@@ -116,12 +117,20 @@ function Game(props) {
       ) : (
         <div>
           {playnew ? (
-            <Row>
-              <Col>
-              <button onClick={() => handlestart()}>play</button>
+            <div>
+              <Row>
+                <Col>
+                  <button onClick={() => handlestart()}>play</button>
                 
-              </Col>
-            </Row>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                <Gamescores/>
+                </Col>
+              </Row>
+            </div>
+            
 
             ) : (
               <div>
@@ -150,7 +159,7 @@ function Game(props) {
             )}
         </div>
       )}
-      <Footer/>
+      
   
     </Container>
   );

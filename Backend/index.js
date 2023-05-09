@@ -22,10 +22,9 @@ const saveSchema = new mongoose.Schema({
 
 const gameSchema = new mongoose.Schema({
   name: String,
-  Score: Number,
-  Time: String,
-  Points: Number
-});
+  score: Number,
+  time: Number,
+  });
 //figure out what the schema should be
 
 const Calculator = mongoose.model('Calculator', saveSchema, 'calculator');
