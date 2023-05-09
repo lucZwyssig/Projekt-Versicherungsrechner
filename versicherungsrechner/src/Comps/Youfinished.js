@@ -16,6 +16,10 @@ function Youfinished(props) {
         props.setplayover(false);
         props.setplaynew(true);
     }
+
+    useEffect(() =>{
+      
+    });
     
     return (
         <div className='popper'>

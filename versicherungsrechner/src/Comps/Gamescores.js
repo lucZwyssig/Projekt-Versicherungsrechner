@@ -27,12 +27,12 @@ function Gamescores() {
     <div>
       <ul>
         {sortedscores.map((singlescore) => {
-          
+          return (
             <li key={singlescore._id}>
               <b>{singlescore.name}</b>
               <p>{singlescore.time}</p>
             </li>
-          
+          );
         })}
       </ul>
     </div>
