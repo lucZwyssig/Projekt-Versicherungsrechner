@@ -6,11 +6,11 @@ import "../CSS.css"
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 import Footer from '../Comps/Footer.js'
-import Stopwatch from '../Comps/Stopwatch.js';
 import Youlost from '../Comps/Youfinished.js';
 import Youfinsished from '../Comps/Youfinished.js';
 import Gamescores from '../Comps/Gamescores.js';
 
+  
 function Game(props) {
   
 
@@ -29,23 +29,24 @@ function Game(props) {
   const [question, setquestion] = useState("")
   const [shuffledlist, setshuffledlist] = useState([]);
   const [choices, setchoices] = useState ([]);
-  const [score, setscore] = useState(0);
+  const [score, setscore] = useState(0);   
   const [playnew, setplaynew] = useState(true);
   const [playover, setplayover] = useState(false);
-  
-  
+  const [endtime, setendtime] = useState(0);
+  const [time, settime] = useState(0);
+  const [intervalID, setintervalID] = useState(null);  
   
 
-  function handlestart(){
-    setshuffledlist(terms.sort(() => Math.random() -0.5));
+  function handlestart() {
+    setshuffledlist(terms.sort(() => Math.random() - 0.5));
     setplaynew(false);
     setlives(3);
     setscore(0);
-       
-    
-
+    const id = setInterval(() => {
+      settime((prevTime) => prevTime + 1);
+    }, 1000);
+    setintervalID(id); 
   }
-
 
 
   function handleanswer(answer){
@@ -77,22 +78,19 @@ function Game(props) {
   
 
   useEffect(() => {
-    if (score < 3){
-    if (lives > 0) {
-      setshuffledlist(terms.sort(() => Math.random() - 0.5));
-    }
-
-    else{
-      
+    if (score < 3) {
+      if (lives > 0) {
+        setshuffledlist(terms.sort(() => Math.random() - 0.5));
+      } else {
+        setplayover(true);
+        setendtime(time);
+        settime(0);
+        clearInterval(intervalID); 
+      }
+    } else {
       setplayover(true);
-      
-      
     }
-  } else{
-    setplayover(true);
-
-  }
-  }, [lives, score]);
+  }, [lives, score, intervalID]);
 
   
 
@@ -111,7 +109,8 @@ function Game(props) {
       </Row>
       {playover ? (
         <div>
-          <Youfinsished score={score} setplaynew={setplaynew} setplayover={setplayover}  playover={playover}/>
+          <Youfinsished endtime={endtime} setplaynew={setplaynew} setplayover={setplayover} playover={playover}/>
+          {endtime}
           
         </div>
       ) : (
@@ -141,7 +140,9 @@ function Game(props) {
                   <Col>
                     <p>Lives: {lives}</p>
                   </Col>
-                  
+                  <Col>
+                  {time}
+                  </Col>
                 </Row>
                 <Row>
                   <Col>

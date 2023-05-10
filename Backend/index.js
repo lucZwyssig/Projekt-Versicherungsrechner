@@ -22,8 +22,7 @@ const saveSchema = new mongoose.Schema({
 
 const gameSchema = new mongoose.Schema({
   name: String,
-  score: Number,
-  time: Number,
+  time: Number
   });
 //figure out what the schema should be
 
@@ -59,7 +58,24 @@ app.post('/api/calculatorpost', async (req, res) => {
   } catch(error){
     console.log(error);
   }
-})
+});
+
+
+app.post('/api/gamepost', async (req, res) => {
+  try {
+    const {name, time} = req.body;
+
+    const data = new Game({
+      name,
+      time
+    });
+
+    const insertdata = await data.save();
+    res.json(insertdata);
+  } catch(error){
+    console.log(error);
+  }
+});
 
 
 

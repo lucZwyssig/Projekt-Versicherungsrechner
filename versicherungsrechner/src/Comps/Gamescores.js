@@ -4,7 +4,7 @@ import axios from 'axios';
 function Gamescores() {
   const [scores, setscores] = useState([]);
   const [sortedscores, setsortedscores] = useState([]);
-
+  
   async function fetchsaves() {
     try {
       const response = await axios.get(`http://localhost:3001/api/game`);
@@ -18,9 +18,10 @@ function Gamescores() {
     fetchsaves();
   }, []);
 
+  
+
   useEffect(() => {
-    setsortedscores(scores);
-    sortedscores.sort((first, second) => first.time - second.time);
+    setsortedscores([...scores].sort((first, second) => first.time - second.time));
   }, [scores]);
 
   return (
