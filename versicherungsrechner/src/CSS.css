@@ -4,6 +4,7 @@ body{
     background-color: #F8B595;
     background-repeat: no-repeat;
     background-position: top;
+    background-attachment: fixed;
     
     
 }
@@ -12,8 +13,9 @@ body{
 }
 
 .navbar{
-    height: 50px;
+
     background-color: #6c5b7c;
+    opacity: 75%;
     
     
 }
@@ -23,7 +25,7 @@ body{
 }
 .col{
     border-style: solid;
-    border-radius: 5px;
+    
     border-width: 2px;
     border-color: rgba(233, 15, 15, 0);
     
@@ -107,14 +109,7 @@ input:hover, button:hover{
   
 
 
-.nav-link{
-    padding: 5px;
-    padding-left: 30px;
-    border: 3px ;
-    border-style: solid;
-    margin-left: 5px;
-    border-radius: 3px;
-}
+
 
 
 
@@ -163,13 +158,7 @@ a{
     justify-self: center;
 }
 
-#footer{
-    display: flex;
-    justify-content: center;
-    bottom: 0;
-   
-    
-}
+
 
 th, td {
     padding: 15px;
@@ -190,9 +179,34 @@ th {
     margin-top: 100px;
 } 
 .carousel{
-    background-color: green;
+    background-color: #C06C84;
+    display: flex;
     height: 100%;
     padding: 20px;
     padding-left: 50px;
-    ;
+    
 }
+
+
+
+
+  
+
+  
+  .custom-table th,
+  .custom-table td {
+    border: none;
+  }
+
+  .footer{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+
+    
+    
+  }
+  
+  
+
+  

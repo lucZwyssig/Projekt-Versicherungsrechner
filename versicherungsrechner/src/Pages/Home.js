@@ -16,7 +16,9 @@ function Home(){
   return(
     <div>
       <Header/>
+      
         <Container fluid className="bootstrap_container">
+          
           <Row className='row'>
             <Col className='col'>
               <Carousel className="carousel">
@@ -45,12 +47,17 @@ function Home(){
             <Col>
             <h1>Entwicklung der Seite</h1>
             <p>
-              Diese Seite wurde als Schulprojekt im zweiten Lehrjahr bei der BBW Winterthur. Das Projekt wurde als Einzelprojekt durchgeführt. Die Webseite wurde mit React-JS entwickelt
-              und auf Cloud Recourcen veröffentlicht. Die Dokumentation des Projektes und der Quellcode ist auf Github under der unten erwähnten Link zu finden.
+              Diese Seite wurde als Schulprojekt im zweiten Lehrjahr bei der BBW Winterthur. Das Projekt wurde als Einzelprojekt durchgeführt. Die Webseite wurde mit React-JS entwickelt, ein leistungsstarkes JavaScript-Bibliothek zur Erstellung von interaktiven Webapplikationen.
+              Um die Seite zu veröffentlichen wurden Webservices von Amazon AWC verwendet, die die nötigen Recourcen zur Verfügung stellte. Die Dokumentation des Projektes und der Quellcode ist auf Github under der unten erwähnten Link zu finden. 
             </p>
             </Col>
           </Row>
+          
+        <Footer/>
         </Container>
+        
+        
+        
 
     </div>
   )

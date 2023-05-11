@@ -93,7 +93,7 @@ function Game(props) {
   }, [lives, score, intervalID]);
 
   
-
+// fix so that when answered correctly item is removed from list
   
 
   return (

@@ -1,55 +1,36 @@
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Table } from "react-bootstrap";
 
 function Footer(){
 
 
-    return(
-        <Row className="row">
-            <Col className="col-12 col-sm-12">
-            
-        <footer id="footer">
-
-        <table>
-            <tr>
-                <th>
-                    Kontakt
-                </th>
-                <th>
-                    Github
-                </th>
-                <th>
-                    Copyright
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    luc.zwyssig@lernende.bbw.ch
-                </td>
-                <td>
-                    Username: lucZwyssig
-                </td>
-                <td>
-                    Luc Zwyssig
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    luc.zwyssig@stud.kbw.ch
-                </td>
-                <td>
-                    Repo: Projekt-Versicherungsrechner
-                </td>
-                <td>
-                    cc cr
-                </td>
-            </tr>
-
-          
-        </table>
-
-      </footer>
-      </Col>
-      </Row>
-    )
-}
+    return (
+        <div> 
+        
+        <footer className="footer" >
+            <Table responsive="md" className="custom-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Kontakt</th>
+                        <th scope="col">Github</th>
+                        <th scope="col">Copyright</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>luc.zwyssig@lernende.bbw.ch</td>
+                        <td>Username: lucZwyssig</td>
+                        <td>Luc Zwyssig</td>
+                    </tr>
+                    <tr>
+                        <td>luc.zwyssig@stud.kbw.ch</td>
+                        <td>Repo: Projekt-Versicherungsrechner</td>
+                        <td>cc cr</td>
+                    </tr>
+                </tbody>
+            </Table>
+        </footer>
+        </div>
+        
+      );
+    }
 export default Footer;
