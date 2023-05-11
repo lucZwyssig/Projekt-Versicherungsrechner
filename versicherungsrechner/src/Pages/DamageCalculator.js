@@ -71,6 +71,7 @@ useEffect(() => {
                 longtext='Als Eingaben mössen sie 4 nötige Werte eingeben. Als erstes die Versicherungssumme. Die Versicherungssumme ist die mit dem Versicherungsunternehmen vereinbarten Betrag, den die Versicherung maximal bezahlen wird. Als nächstes den Betrag des Schadens der entstanden ist. Zuletzt muss auch der Hauswert noch eingegeben werden. Dieser ist der Wert des Hauses und seine Gegenstände.  ' />
             </Col>
         </Row>
+        
             
             <Row className='row'>
               <Col className='col col-12 col-md-4 'id='colform'>
@@ -96,6 +97,7 @@ useEffect(() => {
               
             </Col>
          </Row>
+         <Footer/>
          
         </Container>
       </div>

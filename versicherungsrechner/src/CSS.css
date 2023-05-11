@@ -15,7 +15,7 @@ body{
 .navbar{
 
     background-color: #6c5b7c;
-    opacity: 75%;
+    opacity: 80%;
     
     
 }
@@ -34,7 +34,7 @@ body{
 } 
 
 .instruction{
-    background-color: #827390;
+    background-color: #c06c84;
 }
 #colform{
     display: flex;
@@ -52,8 +52,8 @@ input[type='text']{
     
 }
 
-input[type='text'], button, input[type='submit'], input[type='button']{
-    background-color: #39708A;
+button, input[type='button']{
+    background-color: #9872c7;
     border: solid;
     border-color: black;
     border-width: 2px;
@@ -63,9 +63,16 @@ input[type='text'], button, input[type='submit'], input[type='button']{
     
 }
 
+input[type="text"], input[type="submit"]{
+    background-color: transparent;
+    border: none;
+    margin: 3px;
 
-input:hover, button:hover{
-    background-color: #31596c;
+}
+
+
+input[type="button"]:hover, button:hover{
+    background-color: #5aa7cb;
 }
 
 
@@ -104,32 +111,25 @@ input:hover, button:hover{
     height: 80%;
     overflow: auto;
     
-    
   }
   
-
-
-
-
-
-
-
-a:active {
-    color: rgb(118, 116, 101);
-
-  }
-
-a{
-    color: black;
-    text-decoration: none;
-    font-family: fantasy;
-}
 .compare{
     padding-right: 5%;
 }
+
+#playbutton{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 15%;
+    font-size: 50px;
+    
+}
 #damageresult{
     display: flex;
-    background-color: #c06c84;
+    background-color: #b4647b;
     border: solid;
     border-color: rgb(54, 54, 54);
     align-items: center;
@@ -185,14 +185,10 @@ th {
     padding: 20px;
     padding-left: 50px;
     
+    
 }
 
 
-
-
-  
-
-  
   .custom-table th,
   .custom-table td {
     border: none;

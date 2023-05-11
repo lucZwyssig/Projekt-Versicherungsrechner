@@ -5,25 +5,27 @@ import Instruction from '../Comps/Instructions.js';
 import "../CSS.css"
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
-import Footer from '../Comps/Footer.js'
-import Youlost from '../Comps/Youfinished.js';
 import Youfinsished from '../Comps/Youfinished.js';
 import Gamescores from '../Comps/Gamescores.js';
+import Header from '../Comps/Header.js';
 
   
-function Game(props) {
+function Game() {
   
 
   const terms = [
-    { quest: "a", ans: "A" },
-    { quest: "b", ans: "B" },
-    { quest: "c", ans: "C" },
-    { quest: "d", ans: "D" },
-    { quest: "e", ans: "E" },
-    { quest: "f", ans: "F" },
-    { quest: "g", ans: "G" },
-    { quest: "h",  ans: "H"}
+    { quest: "Hauswert", ans: "Bezieht sich auf den geschätzten finanziellen Wert einer Immobilie" },
+    { quest: "Versicherungssumme", ans: "Bezieht sich auf den maximalen Beitrag, die die Versicherung bezahlen wird." },
+    { quest: "Hausratsversicherung", ans: "Eine Art der Versicherung, der eine Immobilie gegen Schaden absichert." },
+    { quest: "Prämie", ans: "Betrag, den man regelmässig für die Versicherung bezahlt."},
+    { quest: "Unterversicherung", ans: "Tritt auf, wenn die Versicherungssumme kleiner ist als der Hauswert"},
+    { quest: "Überversicherung", ans: "Tritt auf, wenn die Versicherungssumme grösser ist als der Hauswert." },
+    { quest: "Haftpflichtversicherung", ans: "Form der Versicherung, die den Versicherungsnehmer von Schaden and dritten schützt." },
+    { quest: "Teilkaskoversicherung",  ans: "Deckt Schaden am eigenen Auto ab, die durch dritten verursacht wurden."},
+    { quest: "Vollkaskoversicherung", ans: "Deckt Schaden am eingenen Auto ab, die durch dritten und auch sich selbst verursacht wurden."}
   ];
+
+  
 
   const [lives, setlives] = useState(3);
   const [question, setquestion] = useState("")
@@ -97,7 +99,10 @@ function Game(props) {
   
 
   return (
+    <div>
+    <Header/>
     <Container fluid className='bootstrap_container'>
+      
       <Row className='row'>
         <Col className='col instruction'>
           <Instruction
@@ -119,7 +124,7 @@ function Game(props) {
             <div>
               <Row>
                 <Col>
-                  <button onClick={() => handlestart()}>play</button>
+                  <button id='playbutton' onClick={() => handlestart()}>play</button>
                 
                 </Col>
               </Row>
@@ -163,6 +168,7 @@ function Game(props) {
       
   
     </Container>
+    </div>
   );
 }
 
