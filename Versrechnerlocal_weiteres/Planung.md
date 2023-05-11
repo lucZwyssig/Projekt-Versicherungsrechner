@@ -6,7 +6,7 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 ### Priority 2
 - TODO-File erstellen
 - Clean code implementieren (variablennamen ändern === anstatt == etc, Kommentare)
-- css fertig realisieren
+
 
 ###  Priority 3
 - Anleitungen, evt. Erklärvideos erstellen
@@ -15,8 +15,8 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 
 
 ## DOING
-- Home Page Realisieren
 
+- css fertig realisieren
 
 ## DONE
 - Git Repo erstellt 
@@ -33,6 +33,7 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 - Spiel realisieren
 - Speicherfunktion hinzufügen
 - Speicheroption realisieren
+- Home Page Realisieren
 
 ## Arbeit für die nächsten 6 Lektionen
 

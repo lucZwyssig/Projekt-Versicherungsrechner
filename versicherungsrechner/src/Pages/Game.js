@@ -8,21 +8,22 @@ import Col from 'react-bootstrap/esm/Col';
 import Youfinsished from '../Comps/Youfinished.js';
 import Gamescores from '../Comps/Gamescores.js';
 import Header from '../Comps/Header.js';
+import Footer from '../Comps/Footer.js';
 
   
 function Game() {
   
 
   const terms = [
-    { quest: "Hauswert", ans: "Bezieht sich auf den geschätzten finanziellen Wert einer Immobilie" },
-    { quest: "Versicherungssumme", ans: "Bezieht sich auf den maximalen Beitrag, die die Versicherung bezahlen wird." },
-    { quest: "Hausratsversicherung", ans: "Eine Art der Versicherung, der eine Immobilie gegen Schaden absichert." },
-    { quest: "Prämie", ans: "Betrag, den man regelmässig für die Versicherung bezahlt."},
-    { quest: "Unterversicherung", ans: "Tritt auf, wenn die Versicherungssumme kleiner ist als der Hauswert"},
-    { quest: "Überversicherung", ans: "Tritt auf, wenn die Versicherungssumme grösser ist als der Hauswert." },
-    { quest: "Haftpflichtversicherung", ans: "Form der Versicherung, die den Versicherungsnehmer von Schaden and dritten schützt." },
-    { quest: "Teilkaskoversicherung",  ans: "Deckt Schaden am eigenen Auto ab, die durch dritten verursacht wurden."},
-    { quest: "Vollkaskoversicherung", ans: "Deckt Schaden am eingenen Auto ab, die durch dritten und auch sich selbst verursacht wurden."}
+    { quest: "Hauswert", ans: "Geschätzter finanzieller Wert einer Immobilie" },
+    { quest: "Versicherungssumme", ans: "Maximaler Beitrag, den die Versicherung bezahlt" },
+    { quest: "Hausratsversicherung", ans: "Versicherung zum Schutz einer Immobilie vor Schäden" },
+    { quest: "Prämie", ans: "Regelmäßiger Zahlungsbetrag für die Versicherung" },
+    { quest: "Unterversicherung", ans: "Versicherungssumme ist kleiner als der Hauswert" },
+    { quest: "Überversicherung", ans: "Versicherungssumme ist größer als der Hauswert" },
+    { quest: "Haftpflichtversicherung", ans: "Versicherung zum Schutz vor Schäden an Dritten" },
+    { quest: "Teilkaskoversicherung", ans: "Deckt Schäden am eigenen Auto durch Dritte ab" },
+    { quest: "Vollkaskoversicherung", ans: "Deckt Schäden am eigenen Auto durch Dritte und sich selbst ab" }
   ];
 
   
@@ -122,9 +123,9 @@ function Game() {
         <div>
           {playnew ? (
             <div>
-              <Row>
-                <Col>
-                  <button id='playbutton' onClick={() => handlestart()}>play</button>
+              <Row >
+                <Col id='playbutton'>
+                  <button  onClick={() => handlestart()}>play</button>
                 
                 </Col>
               </Row>
@@ -138,35 +139,37 @@ function Game() {
 
             ) : (
               <div>
+                
                 <Row>
                   <Col>
-                    <p>Score: {score}</p>
+                    <h1>Begriff: {question}</h1>
                   </Col>
-                  <Col>
-                    <p>Lives: {lives}</p>
-                  </Col>
-                  <Col>
-                  {time}
-                  </Col>
-                </Row>
-                <Row>
-                  <Col>
-                    <h1>{question}</h1>
-                  </Col>
-                </Row>
+                  </Row>
+                
                 <Row>
                   {choices.map((select, index) => (
-                    <Col key={index}>
-                      <button onClick={() => handleanswer(select)}>{select}</button>
+                    <Col id='answercolumn' key={index}>
+                      <button  onClick={() => handleanswer(select)}>{select}</button>
                     </Col>
                   ))}
+                </Row>
+                <Row className='justify-content-between gameinfo'>
+                  <Col className='col col-12 col-md-3 text-center' >
+                    <h2>Score: {score}</h2>
+                  </Col>
+                  <Col className='col col-12 col-md-3 text-center'>
+                    <h2>Lives: {lives}</h2>
+                  </Col>
+                  <Col className='col col-12 col-md-3 text-center' >
+                  <h2>Time: {time} seconds</h2>
+                  </Col>
                 </Row>
               </div>
             )}
         </div>
       )}
       
-  
+    <Footer/>
     </Container>
     </div>
   );

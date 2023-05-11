@@ -4,7 +4,7 @@ function Footer(){
 
 
     return (
-        <div> 
+        
         
         <footer className="footer" >
             <Table responsive="md" className="custom-table">
@@ -29,7 +29,7 @@ function Footer(){
                 </tbody>
             </Table>
         </footer>
-        </div>
+        
         
       );
     }

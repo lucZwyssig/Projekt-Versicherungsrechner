@@ -58,9 +58,14 @@ button, input[type='button']{
     border-color: black;
     border-width: 2px;
     margin: 3px;
-    height: 30px;
+    height: fit-content;
     text-align: center;
+    padding: 4px;
+
     
+}
+#answercolumn{
+    justify-content: space-between;
 }
 
 input[type="text"], input[type="submit"]{
@@ -118,13 +123,10 @@ input[type="button"]:hover, button:hover{
 }
 
 #playbutton{
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20%;
-    height: 15%;
+    display: flex;
+    justify-content: center;
     font-size: 50px;
+    margin-top: 5%;
     
 }
 #damageresult{
@@ -157,7 +159,9 @@ input[type="button"]:hover, button:hover{
     position: relative;
     justify-self: center;
 }
-
+.gameinfo{
+    padding-top: 10%;
+}
 
 
 th, td {
@@ -175,8 +179,10 @@ th {
     
     padding-right: 8%;
     padding-left: 8%;
-    
+    min-height: 100vh;
     margin-top: 100px;
+    display: flex;
+    flex-direction: column;
 } 
 .carousel{
     background-color: #C06C84;
@@ -194,10 +200,17 @@ th {
     border: none;
   }
 
+
+
   .footer{
-    margin-top: 10%;
+    
+    
+    
     display: flex;
     justify-content: space-around;
+    margin-top: auto;
+    
+
 
     
     

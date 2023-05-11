@@ -18,7 +18,7 @@ function Header () {
               <Navbar.Collapse id="navbar-nav">
                 <Nav className="me-auto">
                   <Nav.Link href="/calculator">Rechner</Nav.Link>
-                  <Nav.Link href="/memory">Memory</Nav.Link>
+                  <Nav.Link href="/memory">Versicherungsspiel</Nav.Link>
                   <Nav.Link href="/comparer">Vergleicher</Nav.Link>
                 </Nav>
               </Navbar.Collapse>
