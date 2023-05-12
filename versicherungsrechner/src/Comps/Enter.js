@@ -15,7 +15,7 @@ function Enter(props) {
       console.log('Data posted successfully:', response.data);
      
     } catch (error) {
-      console.error('Error posting data:', error);
+      console.error('Error posting data:', error); //Mit einem POST request werden Daten zum Backend geschickt
       
     }
   };
@@ -27,7 +27,7 @@ function Enter(props) {
       name: name,
       hausw: parseInt(hausw),
       versum: parseInt(versum),
-      damage: parseInt(damage),
+      damage: parseInt(damage), //Default Daten
       premium: parseInt(premium)
     };
   
@@ -51,9 +51,9 @@ function Enter(props) {
               <form onSubmit={handleEnterSubmit}>
                 <input type="text" placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
                 <input type="text" placeholder="Hauswert" value={hausw} onChange={(event) => handleInputChange(event, setHausw)} />
-                <input type="text" value={versum} onChange={(event) => handleInputChange(event, setVersum)} />
-                <input type="text" value={damage} onChange={(event) => handleInputChange(event, setDamage)} />
-                <input type="text" value={premium} onChange={(event) => handleInputChange(event, setPremium)} />
+                <input type="text" value={versum} placeholder='Versicherungssumme' onChange={(event) => handleInputChange(event, setVersum)} />
+                <input type="text" value={damage} placeholder="Schaden" onChange={(event) => handleInputChange(event, setDamage)} />
+                <input type="text" value={premium} placeholder='Premium' onChange={(event) => handleInputChange(event, setPremium)} />
                 <button type="submit">Submit</button>
               </form>
             </div>
@@ -70,7 +70,7 @@ function Enter(props) {
         setDamage(props.damage);
         setPremium(props.premium);
         setshow(true);
-      }}>Save</button>
+      }}>Speichern</button>
     </div>
   );
 }

@@ -14,7 +14,7 @@ function MYPopup(props) {
 
   async function fetchsaves() {
     try {
-      const response = await axios.get(`http://localhost:3001/api/calculator`);
+      const response = await axios.get(`http://localhost:3001/api/calculator`); //Daten vom Backend werden mit einem GET request geholt
       setsaves(response.data);
     } catch (error) {
       console.error(error);
@@ -22,7 +22,7 @@ function MYPopup(props) {
   }
 
   useEffect(() => {
-    fetchsaves();
+    fetchsaves(); //Daten werden geholt, wenn die Seite geladen wird
   }, []);
 
   const expandsave = (singlesave) => {
@@ -68,7 +68,7 @@ function MYPopup(props) {
         </div>
       ) : (
         <div>
-          <input type="button" id='popbutton' value="Saves" onClick={(e) => toggle()} />
+          <input type="button" id='popbutton' value="Gespeicherte Werte" onClick={(e) => toggle()} />
         </div>
       )}
     </div>

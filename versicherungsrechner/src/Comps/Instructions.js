@@ -10,7 +10,7 @@ import Col from 'react-bootstrap/esm/Col';
 
 
 function Instruction({shorttext, longtext}){
-    
+    //die Instruction component
     const [show, showchange] = useState(false);
     return(
         <div>
@@ -18,8 +18,8 @@ function Instruction({shorttext, longtext}){
                 {show ? [shorttext, longtext] : shorttext}
             </p>
             <button onClick={(e)=> showchange(!show)}>{show ? "weniger anzeigen" : "mehr anzeigen"}</button>
-            </div>
+        </div>
             
-    )
+    );
 
 } export default Instruction;

@@ -8,11 +8,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';  
 
-function Header () {
+function Header () { //das Header Component
     return (
-        <div>
+        <div id='navbardiv'>
           <Navbar className='navbar' collapseOnSelect expand="lg">
-            <Container fluid>
+            
               <Navbar.Brand href="/">Luc Zwyssig Versicherung</Navbar.Brand>
               <Navbar.Toggle aria-controls="navbar-nav" />
               <Navbar.Collapse id="navbar-nav">
@@ -22,7 +22,7 @@ function Header () {
                   <Nav.Link href="/comparer">Vergleicher</Nav.Link>
                 </Nav>
               </Navbar.Collapse>
-            </Container>
+            
           </Navbar>
         </div>
       );

@@ -7,21 +7,44 @@ body{
     background-attachment: fixed;
     
     
+    
 }
 #mor{
     background-color: gray;
 }
 
-.navbar{
+#navbardiv{
 
     background-color: #6c5b7c;
     opacity: 80%;
+    height: fit-content;
+    padding-left: 10px;
+    
+    
+    
     
     
 }
 
+#gamescores{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #F67280;
+    opacity: 85%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: solid;
+    flex-direction: column;
+}
+
+
+
+#header{
+    margin-bottom: 8%;
+}
 .row{
-    margin-bottom: 40px;
+    margin-top: 5%;
 }
 .col{
     border-style: solid;
@@ -33,25 +56,59 @@ body{
     
 } 
 
-.instruction{
-    background-color: #c06c84;
-}
-#colform{
-    display: flex;
-        
-    
-}
-.wideinput{
-    
-    width: 108%;
+.returndiv{
+    min-height: 100vh;
 }
 
-input[type='text']{    
+.instruction{
+    background-color: #d38097;
+    opacity: 90%;
+}
+.colform{
+    display: flex;
+    justify-content: center;
+    
+    
+    
+
+    
+}
+
+.form{
+    
+    opacity: 80%;
+    border-radius: 4px;
+    
+    margin-bottom: 10px;
+    font-size: 20px;
+    width: max-content;
+    
+    
+    
+    
+
+}
+
+
+
+input[type='text'], input[type="submit"]{    
     appearance: textfield;  
     
+    pointer-events: fill;
+    text-align:justify;
+    background-color: #5d7580;
+    background-color: transparent;
+    border: none;
+    margin: 3px;
+    
+
+    
     
 }
 
+input[type="text"]:focus {
+    outline: none;
+  }
 button, input[type='button']{
     background-color: #9872c7;
     border: solid;
@@ -62,23 +119,22 @@ button, input[type='button']{
     text-align: center;
     padding: 4px;
 
+    width: max-content;
+
     
 }
 #answercolumn{
+    display: flex;
     justify-content: space-between;
+    
 }
 
-input[type="text"], input[type="submit"]{
-    background-color: transparent;
-    border: none;
-    margin: 3px;
-
-}
 
 
 input[type="button"]:hover, button:hover{
     background-color: #5aa7cb;
 }
+
 
 
 .modal, .overlay {
@@ -94,6 +150,7 @@ input[type="button"]:hover, button:hover{
 }
 
 
+
 .overlay {
     background: rgba(176, 162, 162, 0.8);
     
@@ -101,6 +158,8 @@ input[type="button"]:hover, button:hover{
     
     
   }
+
+  
   
   .popperstuff {
     position: absolute;
@@ -137,9 +196,10 @@ input[type="button"]:hover, button:hover{
     align-items: center;
     padding-left: 10px;
     padding-right: 10px;
-    
-
+   justify-content: center;    
 }
+
+
 
 #compareresult{
     display: grid;
@@ -158,6 +218,7 @@ input[type="button"]:hover, button:hover{
     width: min-content;
     position: relative;
     justify-self: center;
+    
 }
 .gameinfo{
     padding-top: 10%;
@@ -177,10 +238,10 @@ th {
 
 .bootstrap_container {
     
+    
+    min-height: 100vh;
     padding-right: 8%;
     padding-left: 8%;
-    min-height: 100vh;
-    margin-top: 100px;
     display: flex;
     flex-direction: column;
 } 
@@ -192,6 +253,9 @@ th {
     padding-left: 50px;
     
     
+}
+#homerow{
+    margin-bottom: 0px;
 }
 
 
@@ -208,7 +272,8 @@ th {
     
     display: flex;
     justify-content: space-around;
-    margin-top: auto;
+    margin-top:auto;
+   
     
 
 

@@ -1,7 +1,7 @@
 import { Col, Row, Table } from "react-bootstrap";
 
 function Footer(){
-
+//das footer
 
     return (
         
@@ -11,7 +11,7 @@ function Footer(){
                 <thead>
                     <tr>
                         <th scope="col">Kontakt</th>
-                        <th scope="col">Github</th>
+                        <th scope="col">Github</th> 
                         <th scope="col">Copyright</th>
                     </tr>
                 </thead>
