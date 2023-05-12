@@ -16,8 +16,7 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 
 ## DOING
 
-- css fertig realisieren
-- Clean code implementieren (variablennamen ändern === anstatt == etc, Kommentare)
+
 
 ## DONE
 - Git Repo erstellt 
@@ -36,6 +35,8 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 - Speicheroption realisieren
 - Home Page Realisieren
 - Spiel Zeit implementieren
+- css fertig realisieren
+- Clean code implementieren (variablennamen ändern === anstatt == etc, Kommentare)
 
 ## Arbeit für die nächsten 6 Lektionen
 
