@@ -85,7 +85,11 @@ function Game() {
         clearInterval(intervalID); //Die liste wird gemischt wenn die leben, score, interval sich ändert
       }
     } else {
+
       setplayover(true);
+        setendtime(time);
+        settime(0);
+        clearInterval(intervalID);
     }
   }, [lives, score, intervalID]);
 
@@ -108,7 +112,8 @@ return (
       {playover ? (
         <div>
           <Youfinished endtime={endtime} setplaynew={setplaynew} setplayover={setplayover} playover={playover} score={score} lives={lives} />
-          {endtime}
+          
+          
         </div>
       ) : (
         <div>

@@ -20,7 +20,7 @@ function Youfinished(props) {
 
   const postDataToGame = async (data) => {
     try {
-      const response = await axios.post('http://localhost:3001/api/gamepost', data);
+      const response = await axios.post('http://44.214.43.36:3001/api/gamepost', data);
       console.log('Data posted successfully:', response.data);    //mit einem POST request wird auf dem Backend zugegriffen
     } catch (error) {
       console.error('Error posting data:', error);
@@ -33,7 +33,10 @@ function Youfinished(props) {
   };
 
   useEffect(() => {
-    setTime(props.endtime);
+      setTime(props.endtime);
+      
+    
+    
   }, [props.playover]); //die Zeit der Game wird gemessen
 
   return (
@@ -50,7 +53,7 @@ function Youfinished(props) {
         ) : (
           <div id='lost' className='popperstuff'>
             <h1>Score: {props.score}</h1>
-            <h1>Time: {time}</h1>
+            <h1>Time: {props.endtime}</h1>
             <button onClick={handlePlayNewlost}>Schliessen</button>
           </div>
         )}

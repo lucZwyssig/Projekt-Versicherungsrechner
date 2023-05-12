@@ -14,7 +14,7 @@ function MYPopup(props) {
 
   async function fetchsaves() {
     try {
-      const response = await axios.get(`http://localhost:3001/api/calculator`); //Daten vom Backend werden mit einem GET request geholt
+      const response = await axios.get(`http://44.214.43.36:3001/api/calculator`); //Daten vom Backend werden mit einem GET request geholt
       setsaves(response.data);
     } catch (error) {
       console.error(error);

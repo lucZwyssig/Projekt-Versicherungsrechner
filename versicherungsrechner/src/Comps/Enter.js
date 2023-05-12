@@ -11,7 +11,7 @@ function Enter(props) {
 
   const postdatatocalculator = async (data) => {
     try {
-      const response = await axios.post('http://localhost:3001/api/calculatorpost', data);
+      const response = await axios.post('http://44.214.43.36:3001/api/calculatorpost', data);
       console.log('Data posted successfully:', response.data);
     } catch (error) {
       console.error('Error posting data:', error);

@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://user:user@host.docker.internal:27017/Saves')
+mongoose.connect('mongodb://user:user@3.87.156.67:27017/Saves') //change with each build
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error(err));
 

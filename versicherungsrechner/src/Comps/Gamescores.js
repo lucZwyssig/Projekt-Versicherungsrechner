@@ -7,7 +7,7 @@ function Gamescores() {
   
   async function fetchsaves() {
     try {
-      const response = await axios.get(`http://localhost:3001/api/game`);
+      const response = await axios.get(`http://44.214.43.36:3001/api/game`); //change to the needed port on container
       setscores(response.data); //mit einem GET request werden Daten des Backends gelesen
     } catch (error) {
       console.error(error);
