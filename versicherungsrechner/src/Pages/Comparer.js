@@ -102,7 +102,8 @@ function Comparer() {
             <Col className='col instruction'>
               <Instruction
                 shorttext='Mit diesem Tool können Sie zwei Prämien vergleichen.'
-                longtext='Als Eingaben müssen Sie einen Schaden festlegen, einen Hauswert und zwei verschiedene Prämienkosten.'
+                longtext='Als Eingaben müssen Sie einen Schaden festlegen, einen Hauswert und zwei verschiedene Prämien und Versicherungssummen. Im Chart werden die
+              Kosten über eine Bestimmte Anzahl von Jahren berechnet.'
               />
             </Col>
           </Row>

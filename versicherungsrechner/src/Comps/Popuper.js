@@ -56,8 +56,8 @@ function MYPopup(props) {
             <div className='popperstuff'>
               <div className='poppercontent'>
                 <h2>{selectedsave.name}</h2>
-                <p>Versum: {selectedsave.versum}</p>
-                <p>Hausw: {selectedsave.hausw}</p>
+                <p>Versicherungssumme: {selectedsave.versum}</p>
+                <p>Hauswert: {selectedsave.hausw}</p>
                 <p>Schaden: {selectedsave.damage}</p>
                 <p>Prämie: {selectedsave.premium}</p>
                 <input id='savesbutton' type="button" onClick={(e) => setselectedsave(null)} value="Zurück"/>

@@ -49,23 +49,23 @@ function Enter(props) {
       <div>
         <div className='popper'>
           <div className='overlay'>
-            <div className='popperstuff'>
+            <div className='popperstuff' id="enterstuff">
               <form onSubmit={handleentersubmit}>
                 
                   
-                <input type="text" placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
+                <input className='enterinput' type="text" placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
                 
                 
-                <input type="text" placeholder="Hauswert" value={hausw} onChange={(event) => handleinputchange(event, setHausw)} />
+                <input className='enterinput' type="text" placeholder="Hauswert" value={hausw} onChange={(event) => handleinputchange(event, setHausw)} />
                 
                 
-                <input type="text" value={versum} placeholder='Versicherungssumme' onChange={(event) => handleinputchange(event, setVersum)} />
+                <input className='enterinput' type="text" value={versum} placeholder='Versicherungssumme' onChange={(event) => handleinputchange(event, setVersum)} />
                 
                
-                <input type="text" value={damage} placeholder="Schaden" onChange={(event) => handleinputchange(event, setDamage)} />
+                <input className='enterinput' type="text" value={damage} placeholder="Schaden" onChange={(event) => handleinputchange(event, setDamage)} />
                 
                 
-                <input type="text" value={premium} placeholder='Prämie' onChange={(event) => handleinputchange(event, setPremium)} />
+                <input className='enterinput' type="text" value={premium} placeholder='Prämie' onChange={(event) => handleinputchange(event, setPremium)} />
                 
                 <button type="submit">Submit</button>
                 <button type="button" onClick={handleclosebuttonclick}>Close</button>

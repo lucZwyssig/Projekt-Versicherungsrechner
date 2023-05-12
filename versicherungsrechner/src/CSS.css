@@ -18,12 +18,24 @@ body{
     background-color: #6c5b7c;
     opacity: 80%;
     height: fit-content;
-    padding-left: 10px;
+    padding-left: 10px; 
+    
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    opacity: 50%;
+}
+
+.enterinput{
     
     
+}
+
+#enterstuff{
+    display: flex;
+    justify-content: flex-start;
     
-    
-    
+    width: min-content;
 }
 
 #gamescores{

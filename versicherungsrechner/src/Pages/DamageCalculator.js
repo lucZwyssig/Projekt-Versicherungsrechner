@@ -58,8 +58,8 @@ function Calculator() {
         <Container fluid className='bootstrap_container'> 
           <Row className='row'>
             <Col className='col instruction'>        
-              <Instruction shorttext='Mit diesem Tool können Sie den bezahlter Schaden eines Hausrats berechnen. ' 
-              longtext='Als Eingaben mössen sie 4 nötige Werte eingeben. Als erstes die Versicherungssumme. Die Versicherungssumme ist die mit dem Versicherungsunternehmen vereinbarten Betrag, den die Versicherung maximal bezahlen wird. Als nächstes den Betrag des Schadens der entstanden ist. Zuletzt muss auch der Hauswert noch eingegeben werden. Dieser ist der Wert des Hauses und seine Gegenstände.' />
+              <Instruction shorttext='Mit diesem Tool können Sie den bezahlten Schaden eines Hausrats berechnen. ' 
+              longtext='Sie müssen 4 notwendige Werte eingeben. Als Erstes die Versicherungssumme. Die Versicherungssumme ist der mit dem Versicherungsunternehmen vereinbarte Betrag, den die Versicherung maximal bezahlen wird. Als Nächstes den Betrag des entstandenen Schadens. Zuletzt muss auch der Hauswert eingegeben werden. Dieser entspricht dem Wert des Hauses und seiner Gegenstände.' />
             </Col>
           </Row>
           <Row className='row'>
@@ -79,7 +79,7 @@ function Calculator() {
               </Col>
               <Col className='col col-12 col-md-6' id='damageresult'>
                 <p><b>Die Versicherung wird {damage} Franken bezahlen. </b> <br/> {überunter}  </p>
-                <Enter hausw={hauswert} versum={versumme} damage={schaden} premium={0}  text="Speichern"/> 
+                <Enter hausw={hauswert} versum={versumme} damage={schaden} premium={""}  text="Speichern"/> 
                 <Popuper setuserdata={setUserData} text="gespeicherte Werte"/>
               </Col>
             </Row>

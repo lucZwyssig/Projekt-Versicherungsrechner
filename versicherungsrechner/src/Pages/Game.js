@@ -105,7 +105,7 @@ return (
         <Col className='col instruction'>
           <Instruction
             shorttext='Wie gut kennen Sie die Begriffe der Versicherung?'
-            longtext='Um das Spiel zu starten, klicken Sie auf "Spielen". Es wird ein Begriff und 4 mögliche Antworten zur Auswahl gestellt. Wählen Sie die richtige Antwort, um einen Punkt zu erhalten. Wählen Sie die falsche Antwort, verlieren Sie ein Leben. Bei 0 Leben ist das Spiel vorbei.'
+            longtext='Um das Spiel zu starten, klicken Sie auf "Spielen". Es wird ein Begriff und 3 mögliche Antworten zur Auswahl gestellt. Wählen Sie die richtige Antwort, um einen Punkt zu erhalten. Wählen Sie die falsche Antwort, verlieren Sie ein Leben. Bei 0 Leben ist das Spiel vorbei. Bei drei Punke gewinnen Sie'
           />
         </Col>
       </Row>

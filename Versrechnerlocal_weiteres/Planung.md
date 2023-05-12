@@ -4,19 +4,13 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 ### Priority 1
 
 ### Priority 2
-- TODO-File erstellen
-
-
 
 ###  Priority 3
-- Anleitungen, evt. Erklärvideos erstellen
-
-
-
 
 ## DOING
 
-
+- TODO-File erstellen
+- Anleitungen, evt. Erklärvideos erstellen
 
 ## DONE
 - Git Repo erstellt 
@@ -41,7 +35,6 @@ In diesem Dokument sind die inkrementelle Planungsschritte, die ich für das Pro
 ## Arbeit für die nächsten 6 Lektionen
 
 
-- Speicheroption realisieren
-- Home Page Realisieren
+- fertig werden
 
 
