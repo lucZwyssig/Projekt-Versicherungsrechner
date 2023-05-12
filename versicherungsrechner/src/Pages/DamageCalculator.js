@@ -79,8 +79,8 @@ function Calculator() {
               </Col>
               <Col className='col col-12 col-md-6' id='damageresult'>
                 <p><b>Die Versicherung wird {damage} Franken bezahlen. </b> <br/> {überunter}  </p>
-                <Enter hausw={hauswert} versum={versumme} damage={schaden} premium={0}  /> 
-                <Popuper setuserdata={setUserData} />
+                <Enter hausw={hauswert} versum={versumme} damage={schaden} premium={0}  text="Speichern"/> 
+                <Popuper setuserdata={setUserData} text="gespeicherte Werte"/>
               </Col>
             </Row>
           <Footer/>

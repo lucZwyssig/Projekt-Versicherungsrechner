@@ -68,7 +68,7 @@ function MYPopup(props) {
         </div>
       ) : (
         <div>
-          <input type="button" id='popbutton' value="Gespeicherte Werte" onClick={(e) => toggle()} />
+          <input type="button" id='popbutton' value={props.text} onClick={(e) => toggle()} />
         </div>
       )}
     </div>

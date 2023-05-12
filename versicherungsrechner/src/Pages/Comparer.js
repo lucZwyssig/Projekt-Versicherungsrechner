@@ -111,8 +111,7 @@ function Comparer() {
               <div className='form'>
                 <input className='wideinput' type="text" placeholder="Versicherungssumme 1" value={Versumme1} onChange={(event) => handleInputChange(event, setVersumme1)} />
                 <input className='wideinput' type="text" placeholder="Prämie 1" value={Prämie1} onChange={(event) => handleInputChange(event, setPrämie1)} />
-                <Popuper setuserdata={setuserdata1} />
-                <Enter hausw={Hauswert} versum={Versumme1} damage={damage} premium={Prämie1} />
+                
               </div>
             </Col>
             <Col id='compareresult' className='col-12 col-md-6'>
@@ -128,12 +127,18 @@ function Comparer() {
               <button className='compresultinput' onClick={handleSubmit}>berechnen</button>
             </Col>
             <Col className='colform col-12 col-md-3 compare'>
+              
               <div className='form'>
                 <input className='wideinput' type="text" placeholder="Versicherungssumme 2" value={Versumme2} onChange={(event) => handleInputChange(event, setVersumme2)} />
                 <input className='wideinput' type="text" placeholder="Prämie 2" value={Prämie2} onChange={(event) => handleInputChange(event, setPrämie2)} />
-                <Popuper setuserdata={setuserdata2} />
-                <Enter hausw={Hauswert} versum={Versumme2} damage={damage} premium={Prämie2} />
+                <Popuper setuserdata={setuserdata1} text="gespeicherte Werte 1"/>
+                <Enter hausw={Hauswert} versum={Versumme1} damage={damage} premium={Prämie1} text="Speichern 1"/>
+                <Popuper setuserdata={setuserdata2} text="gespeicherte Werte 2" />
+                <Enter hausw={Hauswert} versum={Versumme2} damage={damage} premium={Prämie2} text="Speichern 2" />
               </div>
+              
+              
+              
             </Col>
           </Row>
           <Footer />

@@ -9,37 +9,39 @@ function Enter(props) {
   const [damage, setDamage] = useState("");
   const [premium, setPremium] = useState("");
 
-  const postDataToCalculator = async (data) => {
+  const postdatatocalculator = async (data) => {
     try {
       const response = await axios.post('http://localhost:3001/api/calculatorpost', data);
       console.log('Data posted successfully:', response.data);
-     
     } catch (error) {
-      console.error('Error posting data:', error); //Mit einem POST request werden Daten zum Backend geschickt
-      
+      console.error('Error posting data:', error);
     }
   };
 
-  const handleEnterSubmit = async (event) => {
+  const handleentersubmit = async (event) => {
     event.preventDefault();
     
     const formData = {
       name: name,
       hausw: parseInt(hausw),
       versum: parseInt(versum),
-      damage: parseInt(damage), //Default Daten
+      damage: parseInt(damage),
       premium: parseInt(premium)
     };
   
-    await postDataToCalculator(formData);
+    await postdatatocalculator(formData);
   }
 
-  const handleInputChange = (event, setValue) => {
+  const handleinputchange = (event, setValue) => {
     const value = event.target.value;
-    const isValidInput = /^\d*$/.test(value); // Regex for numbers 0-9
+    const isValidInput = /^\d*$/.test(value);
     if (isValidInput) {
       setValue(value);
     }
+  }
+
+  const handleclosebuttonclick = () => {
+    setshow(false);
   }
 
   if (show) {
@@ -48,13 +50,25 @@ function Enter(props) {
         <div className='popper'>
           <div className='overlay'>
             <div className='popperstuff'>
-              <form onSubmit={handleEnterSubmit}>
+              <form onSubmit={handleentersubmit}>
+                
+                  
                 <input type="text" placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
-                <input type="text" placeholder="Hauswert" value={hausw} onChange={(event) => handleInputChange(event, setHausw)} />
-                <input type="text" value={versum} placeholder='Versicherungssumme' onChange={(event) => handleInputChange(event, setVersum)} />
-                <input type="text" value={damage} placeholder="Schaden" onChange={(event) => handleInputChange(event, setDamage)} />
-                <input type="text" value={premium} placeholder='Premium' onChange={(event) => handleInputChange(event, setPremium)} />
+                
+                
+                <input type="text" placeholder="Hauswert" value={hausw} onChange={(event) => handleinputchange(event, setHausw)} />
+                
+                
+                <input type="text" value={versum} placeholder='Versicherungssumme' onChange={(event) => handleinputchange(event, setVersum)} />
+                
+               
+                <input type="text" value={damage} placeholder="Schaden" onChange={(event) => handleinputchange(event, setDamage)} />
+                
+                
+                <input type="text" value={premium} placeholder='Prämie' onChange={(event) => handleinputchange(event, setPremium)} />
+                
                 <button type="submit">Submit</button>
+                <button type="button" onClick={handleclosebuttonclick}>Close</button>
               </form>
             </div>
           </div>
@@ -62,6 +76,7 @@ function Enter(props) {
       </div>
     );
   }
+
   return (
     <div>
       <button onClick={() => {
@@ -70,7 +85,7 @@ function Enter(props) {
         setDamage(props.damage);
         setPremium(props.premium);
         setshow(true);
-      }}>Speichern</button>
+      }}>{props.text}</button>
     </div>
   );
 }
