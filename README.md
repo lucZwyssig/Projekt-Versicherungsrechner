@@ -23,5 +23,5 @@ Das Projekt wurde mit React-Javascript entwickelt. Die Datenbank ist in einem Do
 Ich habe Dockerfiles zur erstellen von Docker Containern des Codes erstellt. Die Seite, Backend und Datenbank wurde auf AWS ECS deployed.
 
 
-http://3.230.3.189:3000/ => Temporäre URL
+
 
